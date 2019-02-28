@@ -1,0 +1,43 @@
+.modalOverlay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    opacity: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    animation: show .5s ease;
+}
+
+@keyframes show {
+    0% {
+   	 display: none;
+     opacity: 0;
+    }
+    1% {
+     display: flex;
+     opacity: 0;
+    }
+    100%: {
+      opacity: 1;
+    }
+}
+
+.modal {
+	width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);   
+}
+
+@media only screen and (min-width: 576px) {
+    .modal {
+    	width: 32rem;
+    } 
+}
