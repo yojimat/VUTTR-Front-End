@@ -10,12 +10,12 @@ const mapListView = (lista, abrirModalDelete) => {
 
     return(
       <li key={i}>
-        <h1><a href={item.link}>{item.title}</a></h1>
+        <h1><a href={item.link} target="blank">{item.title}</a></h1>
         <p>{item.description}</p>
         <p>{tagsList}</p>
         <button 
           type="button" 
-          onClick={ () => abrirModalDelete(item.id)} 
+          onClick={ () => abrirModalDelete(item)} 
           id={item.id}
         >
           <span role="img" aria-label="plus">&#x2718;</span> Remover?

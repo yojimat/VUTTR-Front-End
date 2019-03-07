@@ -13,6 +13,7 @@ class App extends Component {
     		modalDeleteAberta: false,
     		toolsList: [],
     		toolIdDelete: null,
+    		nomeTool: "",
     		tagFiltro: false
   		};
 	}
@@ -66,7 +67,6 @@ class App extends Component {
 	//ArrowFunction como método para receber valorPesquisa, evitando erro de propagação.
 	pesquisaFiltradasTools = (valorPesquisa) => {
 		const { tagFiltro } = this.state;
-		console.log(valorPesquisa);
 		if (tagFiltro) {
 			this.getListaToolsBuscaTag(valorPesquisa);
 		} else {
@@ -78,18 +78,23 @@ class App extends Component {
 		this.setState({ tagFiltro: !this.state.tagFiltro }, () =>{
 			this.pesquisaFiltradasTools(ref);
 		});
-	} 
+	}
 
 	toggleModal () {
   		this.setState({ modalAdicionarAberta: !this.state.modalAdicionarAberta });
 	}
 
 	//ArrowFunction como método para receber id, evitando erro de propagação.
-	toggleModalDelete = (id) => {
+	toggleModalDelete = (item) => {
   		this.setState(
   			{ modalDeleteAberta: !this.state.modalDeleteAberta },
   			() => {
-  				if (this.state.modalDeleteAberta === true) { this.setState({toolIdDelete: id}) }
+  				if (this.state.modalDeleteAberta === true) { 
+  					this.setState({
+  						toolIdDelete: item.id,
+  						nomeTool: item.title
+  					}) 
+  				}
 				else { this.setState({toolIdDelete: null}) }
   			}
   		);
@@ -127,7 +132,7 @@ class App extends Component {
 	}
 
 	render() {
-		const { modalAdicionarAberta, modalDeleteAberta, toolsList } = this.state;
+		const { modalAdicionarAberta, modalDeleteAberta, toolsList, nomeTool } = this.state;
 
 		return(
 			<div>
@@ -151,6 +156,7 @@ class App extends Component {
 						<RemoveTool 
 							fecharModal={() =>this.toggleModalDelete()}
 							deleteTool={() =>this.deleteTool()}
+							nomeTool={ nomeTool }
 						/>
 					</ModalVuttr>}				
 			</div>
@@ -160,9 +166,9 @@ class App extends Component {
 export default App;
 
 //Ideias: 
+//Resetar input search box.-tentei
+//Na pesquisa por tag fazer um highlight tna tags achadas.-tentei
 //Quando deletar manda uma msg para o usuario que o item foi deletado com sucesso.
 //Quando adicionar mandar uma msg para o usuario.
-//Arruma a frase do modal delete.
-//link para abrir outra janela ao invés de rediricionar a pagina.
-//Na pesquisa por tag fazer um highlight tna tags achadas.
-//Resetar input search box.
+//Mensagens de validação para erros de conexão, depois do loading do aperta do botão.
+//Adicionar loading da lista.

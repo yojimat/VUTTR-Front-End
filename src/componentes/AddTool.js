@@ -5,7 +5,7 @@ const modelTool = {
 	title: "",
 	link: "",
 	description: "",
-	tags: ["","",""]
+	tags: []
 }
 
 const tag = (index) => {
