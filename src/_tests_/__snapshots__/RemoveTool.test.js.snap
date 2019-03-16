@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>>RemoveTool.js +RemoveTool renderiza normalmente. 1`] = `
+<section
+  className="removeTool"
+>
+  <p>
+    Você tem certeza que quer remover 
+     da lista?
+  </p>
+  <button
+    type="button"
+  >
+    Cancelar
+  </button>
+  <button
+    type="submit"
+  >
+    Sim, deletar.
+  </button>
+</section>
+`;

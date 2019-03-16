@@ -1,0 +1,793 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>>Vuttr.js +Snapshot/Vuttr renderiza normalmente. 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <React.Fragment>
+    <ForwardRef
+      abrirModal={[MockFunction]}
+      abrirModalDelete={[MockFunction]}
+      pesquisaFiltradasTools={[MockFunction]}
+      toggleTagFiltro={[MockFunction]}
+      toolsList={Array []}
+    />
+  </React.Fragment>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "abrirModal": [MockFunction],
+      "abrirModalDelete": [MockFunction],
+      "pesquisaFiltradasTools": [MockFunction],
+      "toggleTagFiltro": [MockFunction],
+      "toolsList": Array [],
+    },
+    "ref": Object {
+      "current": null,
+    },
+    "rendered": Object {
+      "instance": <div
+        class="App"
+      >
+        <header>
+          <h1>
+            VUTTR
+          </h1>
+          <h2>
+            Very Useful Tools to Remember
+          </h2>
+        </header>
+        <section>
+          <input
+            placeholder="Pesquise aqui!"
+            type="search"
+            value=""
+          />
+           
+          <label>
+            <input
+              type="checkbox"
+            />
+            Procurar com #tags?
+          </label>
+           
+          <button
+            type="button"
+          >
+            <span
+              aria-label="plus"
+              role="img"
+            >
+              ➕
+            </span>
+             Adicionar
+          </button>
+          <br />
+          <ul />
+        </section>
+      </div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <header>
+            <h1>
+              VUTTR
+            </h1>
+            <h2>
+              Very Useful Tools to Remember
+            </h2>
+          </header>,
+          <section>
+            <input
+              onChange={[Function]}
+              placeholder="Pesquise aqui!"
+              type="search"
+            />
+             
+            <label>
+              <input
+                onChange={[Function]}
+                type="checkbox"
+              />
+              Procurar com #tags?
+            </label>
+             
+            <button
+              onClick={[MockFunction]}
+              type="button"
+            >
+              <span
+                aria-label="plus"
+                role="img"
+              >
+                ➕
+              </span>
+               Adicionar
+            </button>
+            <br />
+            <ul />
+          </section>,
+        ],
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <header>
+            <h1>
+              VUTTR
+            </h1>
+            <h2>
+              Very Useful Tools to Remember
+            </h2>
+          </header>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                VUTTR
+              </h1>,
+              <h2>
+                Very Useful Tools to Remember
+              </h2>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <h1>
+                VUTTR
+              </h1>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "VUTTR",
+              },
+              "ref": null,
+              "rendered": Array [
+                "VUTTR",
+              ],
+              "type": "h1",
+            },
+            Object {
+              "instance": <h2>
+                Very Useful Tools to Remember
+              </h2>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Very Useful Tools to Remember",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Very Useful Tools to Remember",
+              ],
+              "type": "h2",
+            },
+          ],
+          "type": "header",
+        },
+        Object {
+          "instance": <section>
+            <input
+              placeholder="Pesquise aqui!"
+              type="search"
+              value=""
+            />
+             
+            <label>
+              <input
+                type="checkbox"
+              />
+              Procurar com #tags?
+            </label>
+             
+            <button
+              type="button"
+            >
+              <span
+                aria-label="plus"
+                role="img"
+              >
+                ➕
+              </span>
+               Adicionar
+            </button>
+            <br />
+            <ul />
+          </section>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                onChange={[Function]}
+                placeholder="Pesquise aqui!"
+                type="search"
+              />,
+              " ",
+              <label>
+                <input
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                Procurar com #tags?
+              </label>,
+              " ",
+              <button
+                onClick={[MockFunction]}
+                type="button"
+              >
+                <span
+                  aria-label="plus"
+                  role="img"
+                >
+                  ➕
+                </span>
+                 Adicionar
+              </button>,
+              <br />,
+              <ul />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <input
+                placeholder="Pesquise aqui!"
+                type="search"
+                value=""
+              />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "onChange": [Function],
+                "placeholder": "Pesquise aqui!",
+                "type": "search",
+                "value": undefined,
+              },
+              "ref": [Function],
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "input",
+            },
+            " ",
+            Object {
+              "instance": <label>
+                <input
+                  type="checkbox"
+                />
+                Procurar com #tags?
+              </label>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    onChange={[Function]}
+                    type="checkbox"
+                  />,
+                  "Procurar com #tags?",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <input
+                    type="checkbox"
+                  />,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "onChange": [Function],
+                    "type": "checkbox",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "input",
+                },
+                "Procurar com #tags?",
+              ],
+              "type": "label",
+            },
+            " ",
+            Object {
+              "instance": <button
+                type="button"
+              >
+                <span
+                  aria-label="plus"
+                  role="img"
+                >
+                  ➕
+                </span>
+                 Adicionar
+              </button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    aria-label="plus"
+                    role="img"
+                  >
+                    ➕
+                  </span>,
+                  " Adicionar",
+                ],
+                "onClick": [MockFunction],
+                "type": "button",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <span
+                    aria-label="plus"
+                    role="img"
+                  >
+                    ➕
+                  </span>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "plus",
+                    "children": "➕",
+                    "role": "img",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "➕",
+                  ],
+                  "type": "span",
+                },
+                " Adicionar",
+              ],
+              "type": "button",
+            },
+            Object {
+              "instance": <br />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "br",
+            },
+            Object {
+              "instance": <ul />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [],
+              },
+              "ref": null,
+              "rendered": Array [
+                Array [],
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "div",
+    },
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "abrirModal": [MockFunction],
+        "abrirModalDelete": [MockFunction],
+        "pesquisaFiltradasTools": [MockFunction],
+        "toggleTagFiltro": [MockFunction],
+        "toolsList": Array [],
+      },
+      "ref": Object {
+        "current": null,
+      },
+      "rendered": Object {
+        "instance": <div
+          class="App"
+        >
+          <header>
+            <h1>
+              VUTTR
+            </h1>
+            <h2>
+              Very Useful Tools to Remember
+            </h2>
+          </header>
+          <section>
+            <input
+              placeholder="Pesquise aqui!"
+              type="search"
+              value=""
+            />
+             
+            <label>
+              <input
+                type="checkbox"
+              />
+              Procurar com #tags?
+            </label>
+             
+            <button
+              type="button"
+            >
+              <span
+                aria-label="plus"
+                role="img"
+              >
+                ➕
+              </span>
+               Adicionar
+            </button>
+            <br />
+            <ul />
+          </section>
+        </div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <header>
+              <h1>
+                VUTTR
+              </h1>
+              <h2>
+                Very Useful Tools to Remember
+              </h2>
+            </header>,
+            <section>
+              <input
+                onChange={[Function]}
+                placeholder="Pesquise aqui!"
+                type="search"
+              />
+               
+              <label>
+                <input
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                Procurar com #tags?
+              </label>
+               
+              <button
+                onClick={[MockFunction]}
+                type="button"
+              >
+                <span
+                  aria-label="plus"
+                  role="img"
+                >
+                  ➕
+                </span>
+                 Adicionar
+              </button>
+              <br />
+              <ul />
+            </section>,
+          ],
+          "className": "App",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <header>
+              <h1>
+                VUTTR
+              </h1>
+              <h2>
+                Very Useful Tools to Remember
+              </h2>
+            </header>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1>
+                  VUTTR
+                </h1>,
+                <h2>
+                  Very Useful Tools to Remember
+                </h2>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <h1>
+                  VUTTR
+                </h1>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "VUTTR",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "VUTTR",
+                ],
+                "type": "h1",
+              },
+              Object {
+                "instance": <h2>
+                  Very Useful Tools to Remember
+                </h2>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Very Useful Tools to Remember",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Very Useful Tools to Remember",
+                ],
+                "type": "h2",
+              },
+            ],
+            "type": "header",
+          },
+          Object {
+            "instance": <section>
+              <input
+                placeholder="Pesquise aqui!"
+                type="search"
+                value=""
+              />
+               
+              <label>
+                <input
+                  type="checkbox"
+                />
+                Procurar com #tags?
+              </label>
+               
+              <button
+                type="button"
+              >
+                <span
+                  aria-label="plus"
+                  role="img"
+                >
+                  ➕
+                </span>
+                 Adicionar
+              </button>
+              <br />
+              <ul />
+            </section>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  onChange={[Function]}
+                  placeholder="Pesquise aqui!"
+                  type="search"
+                />,
+                " ",
+                <label>
+                  <input
+                    onChange={[Function]}
+                    type="checkbox"
+                  />
+                  Procurar com #tags?
+                </label>,
+                " ",
+                <button
+                  onClick={[MockFunction]}
+                  type="button"
+                >
+                  <span
+                    aria-label="plus"
+                    role="img"
+                  >
+                    ➕
+                  </span>
+                   Adicionar
+                </button>,
+                <br />,
+                <ul />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <input
+                  placeholder="Pesquise aqui!"
+                  type="search"
+                  value=""
+                />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "onChange": [Function],
+                  "placeholder": "Pesquise aqui!",
+                  "type": "search",
+                  "value": undefined,
+                },
+                "ref": [Function],
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "input",
+              },
+              " ",
+              Object {
+                "instance": <label>
+                  <input
+                    type="checkbox"
+                  />
+                  Procurar com #tags?
+                </label>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <input
+                      onChange={[Function]}
+                      type="checkbox"
+                    />,
+                    "Procurar com #tags?",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <input
+                      type="checkbox"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "onChange": [Function],
+                      "type": "checkbox",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "input",
+                  },
+                  "Procurar com #tags?",
+                ],
+                "type": "label",
+              },
+              " ",
+              Object {
+                "instance": <button
+                  type="button"
+                >
+                  <span
+                    aria-label="plus"
+                    role="img"
+                  >
+                    ➕
+                  </span>
+                   Adicionar
+                </button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span
+                      aria-label="plus"
+                      role="img"
+                    >
+                      ➕
+                    </span>,
+                    " Adicionar",
+                  ],
+                  "onClick": [MockFunction],
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <span
+                      aria-label="plus"
+                      role="img"
+                    >
+                      ➕
+                    </span>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "plus",
+                      "children": "➕",
+                      "role": "img",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "➕",
+                    ],
+                    "type": "span",
+                  },
+                  " Adicionar",
+                ],
+                "type": "button",
+              },
+              Object {
+                "instance": <br />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "br",
+              },
+              Object {
+                "instance": <ul />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Array [],
+                ],
+                "type": "ul",
+              },
+            ],
+            "type": "section",
+          },
+        ],
+        "type": "div",
+      },
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -50,7 +50,7 @@ const AddTool = ({...props }) => {
 	}
 
 	return(
-		<section>
+		<section className="addTool">
 			<h1>
 				<span role="img" aria-label="plus">➕</span>Nova Tool:
 			</h1>

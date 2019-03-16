@@ -24,8 +24,8 @@ class ModalVuttr extends Component {
 
   		if (this.modal !== null) {
     		if (!this.modal.contains(e.target)) {
-      		fecharModal();
-      		document.removeEventListener('click', this.listenerOutsideClick, false);
+	      		fecharModal();
+	      		document.removeEventListener('click', this.listenerOutsideClick, false);
     		}
   		}
 	}

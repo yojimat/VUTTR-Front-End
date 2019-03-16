@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>>App.js +App renderiza normalmente. 1`] = `
+<div>
+  <div
+    className="App"
+  >
+    <header>
+      <h1>
+        VUTTR
+      </h1>
+      <h2>
+        Very Useful Tools to Remember
+      </h2>
+    </header>
+    <section>
+      <input
+        onChange={[Function]}
+        placeholder="Pesquise aqui!"
+        type="search"
+      />
+       
+      <label>
+        <input
+          onChange={[Function]}
+          type="checkbox"
+        />
+        Procurar com #tags?
+      </label>
+       
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          aria-label="plus"
+          role="img"
+        >
+          ➕
+        </span>
+         Adicionar
+      </button>
+      <br />
+      <ul />
+    </section>
+  </div>
+</div>
+`;

@@ -22,8 +22,8 @@ class App extends Component {
 		this.getListaTools();
 	}
 
-	getListaTools() {
-		fetch("/tools", {
+	async getListaTools() {
+		const dados =  await fetch("/tools", {
 			method: "get",
 			headers: {
 				'Content-Type': 'application/json'
@@ -31,13 +31,17 @@ class App extends Component {
 		})
 		.then(resp => resp.json())
 		.then(data => {
-			this.setState({ toolsList: data });
+			return data;
 		})
 		.catch(error => console.log(error));
+
+		if (dados !== undefined) {
+			this.setState({ toolsList: dados });
+		}	
 	}
 
-	getListaToolsBuscaGlobal(busca) {
-		fetch(`/tools?q=${busca}`, {
+	async getListaToolsBuscaGlobal(busca) {
+		const dados =  await fetch(`/tools?q=${busca}`, {
 			method: "get",
 			headers: {
 				'Content-Type': 'application/json'
@@ -45,13 +49,17 @@ class App extends Component {
 		})
 		.then(resp => resp.json())
 		.then(data => {
-			this.setState({ toolsList: data });
+			return data;
 		})
 		.catch(error => console.log(error));
+
+		if (dados !== undefined) {
+			this.setState({ toolsList: dados });
+		}	
 	}
 
-	getListaToolsBuscaTag(tag) {
-		fetch(`/tools?tags_like=${tag}`, {
+	async getListaToolsBuscaTag(tag) {
+		const dados =  await fetch(`/tools?tags_like=${tag}`, {
 			method: "get",
 			headers: {
 				'Content-Type': 'application/json'
@@ -59,9 +67,13 @@ class App extends Component {
 		})
 		.then(resp => resp.json())
 		.then(data => {
-			this.setState({ toolsList: data });
+			return data;
 		})
 		.catch(error => console.log(error));
+
+		if (dados !== undefined) {
+			this.setState({ toolsList: dados });
+		}	
 	}
 
 	//ArrowFunction como método para receber valorPesquisa, evitando erro de propagação.
@@ -74,9 +86,9 @@ class App extends Component {
 		}
 	}
 
-	toggleTagFiltro = (ref) => {
+	toggleTagFiltro = (refValue) => {
 		this.setState({ tagFiltro: !this.state.tagFiltro }, () =>{
-			this.pesquisaFiltradasTools(ref);
+			this.pesquisaFiltradasTools(refValue);
 		});
 	}
 
