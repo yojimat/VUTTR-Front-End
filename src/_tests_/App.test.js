@@ -31,7 +31,7 @@ describe(">>>App.js", () => {
   		expect(appContainer).toMatchSnapshot();
 	});
 
-	it("+Verificando ToggleModalAdd", () =>{
+	it("+Verificando evento ToggleModalAdd", () =>{
 		const appToggle = mount(<App />);
 
 		expect.assertions(3);
@@ -41,7 +41,7 @@ describe(">>>App.js", () => {
 		expect(appToggle.find(".addTool")).toHaveLength(1);
 	});
 
-	it("+Verificando ToggleModalRemove", () =>{
+	it("+Verificando evento ToggleModalRemove", () =>{
 		const appToggleRemove = mount(<App />);
 
 		expect.assertions(6);
@@ -148,7 +148,7 @@ describe(">>>App.js", () => {
 		});	
 	});
 
-	it("+Verificando pesquisaFiltradasTools", () => {
+	it("+Verificando método pesquisaFiltradasTools", () => {
 		const appPesquisaFiltradasTools = mount(<App />),
 			spyTag = jest.spyOn(App.prototype, 'getListaToolsBuscaTag'),
 			spyGlobal = jest.spyOn(App.prototype, 'getListaToolsBuscaGlobal');
@@ -167,22 +167,90 @@ describe(">>>App.js", () => {
 
 		expect(spyTag).toHaveBeenCalled();
 		expect(spyTag).toHaveBeenCalledTimes(1);
+		spyTag.mockClear();
+		spyGlobal.mockClear();
 	});
 
-	it("+Verificando toggleTagFiltro", () => {
-		const apptoggleTagFiltro = mount(<App />),
-			spypesquisaFiltradasTools = jest.spyOn(apptoggleTagFiltro.instance(), 'pesquisaFiltradasTools');
+	it("+Verificando método toggleTagFiltro", () => {
+		const appToggleTagFiltro = mount(<App />),
+			spyPesquisaFiltradasTools = jest.spyOn(appToggleTagFiltro.instance(), 'pesquisaFiltradasTools');
 
 		//Force Update para o jest entender que pesquisaFiltradasTools é uma função.
-		apptoggleTagFiltro.instance().forceUpdate();
+		//appToggleTagFiltro.instance().forceUpdate();
 
-		expect(spypesquisaFiltradasTools).toHaveBeenCalledTimes(0);
-		expect(apptoggleTagFiltro.state("tagFiltro")).toBe(false);
+		expect(spyPesquisaFiltradasTools).toHaveBeenCalledTimes(0);
+		expect(appToggleTagFiltro.state("tagFiltro")).toBe(false);
 
-		apptoggleTagFiltro.instance().toggleTagFiltro("jest");
+		appToggleTagFiltro.instance().toggleTagFiltro("jest");
 
-		expect(apptoggleTagFiltro.state("tagFiltro")).toBe(true);
-		expect(spypesquisaFiltradasTools).toHaveBeenCalled();
-		expect(spypesquisaFiltradasTools).toHaveBeenCalledTimes(1);
+		expect(appToggleTagFiltro.state("tagFiltro")).toBe(true);
+		expect(spyPesquisaFiltradasTools).toHaveBeenCalled();
+		expect(spyPesquisaFiltradasTools).toHaveBeenCalledTimes(1);
+	});
+
+	it("+Verificando método toggleModal.", () => {
+		const appToggleModal = mount(<App />);
+
+		expect(appToggleModal.state("modalAdicionarAberta")).toBe(false);
+
+		appToggleModal.instance().toggleModal();
+
+		expect(appToggleModal.state("modalAdicionarAberta")).toBe(true);
+	});
+
+	it("+Verificando método toggleModalDelete.", () => {
+		const toggleModalDelete = mount(<App />),
+			item = {
+				id: 1,
+				title: "Jest"
+			};
+
+		expect(toggleModalDelete.state("modalDeleteAberta")).toBe(false);
+		expect(toggleModalDelete.state("toolIdDelete")).toBe(null);
+		expect(toggleModalDelete.state("nomeTool")).toBe("");
+
+		toggleModalDelete.instance().toggleModalDelete(item);
+
+		expect(toggleModalDelete.state("modalDeleteAberta")).toBe(true);
+		expect(toggleModalDelete.state("toolIdDelete")).toBe(1);
+		expect(toggleModalDelete.state("nomeTool")).toBe("Jest");
+
+		toggleModalDelete.instance().toggleModalDelete(item);
+
+		expect(toggleModalDelete.state("toolIdDelete")).toBe(null);
+		expect(toggleModalDelete.state("nomeTool")).toBe("");
+	});
+
+	it("+Verificando método deleteTool.", () => {
+		const fetchCallDeleteTool = fetchCallMock(),
+    		appDeleteTool = mount(<App />);
+
+    	appDeleteTool.setState({ toolIdDelete: 1 });	
+    	jest.spyOn(global, 'fetch').mockImplementation(() => fetchCallDeleteTool);
+
+    	appDeleteTool.instance().deleteTool();
+
+    	expect(global.fetch).toHaveBeenCalledWith("/tools/1",{"headers": {"Content-Type": "application/json"}, "method": "delete"});
+
+    	global.fetch.mockClear();
+	});
+
+	it("+Verificando método adicionarTool.", () => {
+		const fetchCallAdicionarTool = fetchCallMock(),
+			appAdicionarTool = mount(<App />),
+			form = {
+				description: "Testando com Jest",
+				link: "test.com",
+				tags: ["jest", "enzyme"],
+				title: "Jest"
+			};
+
+		jest.spyOn(global, 'fetch').mockImplementation(() => fetchCallAdicionarTool);
+
+		appAdicionarTool.instance().adicionarTool();
+
+		expect(global.fetch).toHaveBeenCalledWith("/tools/",{"headers": {"Content-Type": "application/json"}, "method": "post"});
+
+		global.fetch.mockClear();
 	});
 });

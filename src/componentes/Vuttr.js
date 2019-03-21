@@ -26,7 +26,7 @@ const mapListView = (lista, abrirModalDelete) => {
 };
 
 const Vuttr = React.forwardRef(({...props }, ref) => {
-  const { abrirModal, abrirModalDelete, toolsList, pesquisaFiltradasTools, toggleTagFiltro} = props;
+  const { abrirModal, abrirModalDelete, toolsList, pesquisaFiltradasTools, toggleTagFiltro } = props;
 
   return(
     <div className="App">

@@ -11,12 +11,12 @@ class ModalVuttr extends Component {
 
 	componentDidMount() {
   		window.addEventListener('keyup', this.pressionarButton, false);
-  		document.addEventListener('click', this.listenerOutsideClick, false);
+  		document.addEventListener('mousedown', this.listenerOutsideClick, false);
 	}
 
 	componentWillUnmount() {
   		window.removeEventListener('keyup', this.pressionarButton, false);
-  		document.removeEventListener('click', this.listenerOutsideClick, false);
+  		document.removeEventListener('mousedown', this.listenerOutsideClick, false);
 	}
 
 	listenerOutsideClick(e) {
@@ -25,7 +25,8 @@ class ModalVuttr extends Component {
   		if (this.modal !== null) {
     		if (!this.modal.contains(e.target)) {
 	      		fecharModal();
-	      		document.removeEventListener('click', this.listenerOutsideClick, false);
+	      		document.removeEventListener('mousedown', this.listenerOutsideClick, false);
+	      		return;
     		}
   		}
 	}

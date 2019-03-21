@@ -1,8 +1,8 @@
-.App {
-	text-align: center;
-}
-
 ul {
 	display: inline-block;
 	list-style-type: none;
+}
+
+.App {
+	text-align: center;
 }

@@ -14,7 +14,9 @@ class App extends Component {
     		toolsList: [],
     		toolIdDelete: null,
     		nomeTool: "",
-    		tagFiltro: false
+    		tagFiltro: false,
+    		isLoading: false,
+    		respostaFetchUsuario: ""
   		};
 	}
 
@@ -101,19 +103,26 @@ class App extends Component {
   		this.setState(
   			{ modalDeleteAberta: !this.state.modalDeleteAberta },
   			() => {
-  				if (this.state.modalDeleteAberta === true) { 
+  				if (this.state.modalDeleteAberta === true && item !== undefined) { 
   					this.setState({
   						toolIdDelete: item.id,
   						nomeTool: item.title
-  					}) 
-  				}
-				else { this.setState({toolIdDelete: null}) }
+  					}); 
+  				} else { 
+					this.setState({
+						toolIdDelete: null,
+						nomeTool: ""
+					});
+					this.loaderStatus("mensagemRecebida");
+				}
   			}
   		);
 	}
-
+	//Retornar resposta para faciliar testes.
 	deleteTool() {
 		const { toolIdDelete } = this.state;
+
+		this.loaderStatus();
 
 		fetch(`/tools/${toolIdDelete}`,{
 			method: "delete",
@@ -123,7 +132,9 @@ class App extends Component {
 		})
 		.then(resp => {
 			this.getListaTools();
-			this.toggleModalDelete();
+
+			if (resp.status === 200) { this.loaderStatus("Sucesso!") }
+				else { this.loaderStatus(".") }
 		})
 		.catch(error => console.log(error));
 	}
@@ -138,13 +149,25 @@ class App extends Component {
 		})
 		.then(resp => {
 			this.getListaTools();
+
 			return resp.json();
 		})
 		.catch(error => console.log(error));
 	}
 
+	//Adicionar teste.
+	loaderStatus = (mensagem = "loading") => {
+		if (mensagem === "loading") { this.setState({ isLoading: true }) } 
+			else if ( mensagem === "mensagemRecebida") { 
+				this.setState({ 
+					isLoading: false,
+					respostaFetchUsuario: ""
+				}) 
+			} else { this.setState({ respostaFetchUsuario: mensagem }) }
+	}
+
 	render() {
-		const { modalAdicionarAberta, modalDeleteAberta, toolsList, nomeTool } = this.state;
+		const { modalAdicionarAberta, modalDeleteAberta, toolsList, nomeTool, isLoading, respostaFetchUsuario } = this.state;
 
 		return(
 			<div>
@@ -169,8 +192,10 @@ class App extends Component {
 							fecharModal={() =>this.toggleModalDelete()}
 							deleteTool={() =>this.deleteTool()}
 							nomeTool={ nomeTool }
+							isLoading={ isLoading }
+							respostaFetchUsuario={ respostaFetchUsuario }
 						/>
-					</ModalVuttr>}				
+					</ModalVuttr>}
 			</div>
 		);
 	}
@@ -180,7 +205,8 @@ export default App;
 //Ideias: 
 //Resetar input search box.-tentei
 //Na pesquisa por tag fazer um highlight tna tags achadas.-tentei
-//Quando deletar manda uma msg para o usuario que o item foi deletado com sucesso.
 //Quando adicionar mandar uma msg para o usuario.
 //Mensagens de validação para erros de conexão, depois do loading do aperta do botão.
 //Adicionar loading da lista.
+//Falta fazer teste dos eventos addTag, removeTag e validação e loader do Addtool.js.
+//Adicionar mensagem de lista vazia

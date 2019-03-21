@@ -14,11 +14,26 @@
     overflow-x: hidden;
     overflow-y: auto;
     animation: show .5s ease;
+    -webkit-animation: show .5s ease;
 }
 
 @keyframes show {
     0% {
    	 display: none;
+     opacity: 0;
+    }
+    1% {
+     display: flex;
+     opacity: 0;
+    }
+    100%: {
+      opacity: 1;
+    }
+}
+
+@-webkit-keyframes show {
+    0% {
+     display: none;
      opacity: 0;
     }
     1% {
