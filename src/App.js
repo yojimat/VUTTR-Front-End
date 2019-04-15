@@ -3,6 +3,9 @@ import Vuttr from "./componentes/Vuttr";
 import ModalVuttr from "./componentes/ModalVuttr";
 import AddTool from "./componentes/AddTool";
 import RemoveTool from "./componentes/RemoveTool";
+import Particles from "react-particles-js";
+import particlesOptions from "./helpers/ParticlesOptions";
+import './App.css';
 
 class App extends Component {
 	constructor() {
@@ -16,7 +19,9 @@ class App extends Component {
     		nomeTool: "",
     		tagFiltro: false,
     		isLoading: false,
-    		respostaFetchUsuario: ""
+    		respostaFetchUsuario: "",
+    		respostaLista: "",
+    		isLoadingLista: false
   		};
 	}
 
@@ -39,10 +44,12 @@ class App extends Component {
 
 		if (dados !== undefined) {
 			this.setState({ toolsList: dados });
-		}	
+		}
 	}
 
 	async getListaToolsBuscaGlobal(busca) {
+		this.loaderStatusLista();
+
 		const dados =  await fetch(`/tools?q=${busca}`, {
 			method: "get",
 			headers: {
@@ -57,10 +64,15 @@ class App extends Component {
 
 		if (dados !== undefined) {
 			this.setState({ toolsList: dados });
+			this.loaderStatusLista("mensagemRecebida");
+		} else {
+			this.loaderStatusLista("Falha ao carregar a lista, tente recarregar a página.");
 		}	
 	}
 
 	async getListaToolsBuscaTag(tag) {
+		this.loaderStatusLista();
+
 		const dados =  await fetch(`/tools?tags_like=${tag}`, {
 			method: "get",
 			headers: {
@@ -75,7 +87,10 @@ class App extends Component {
 
 		if (dados !== undefined) {
 			this.setState({ toolsList: dados });
-		}	
+			this.loaderStatusLista("mensagemRecebida");
+		} else {
+			this.loaderStatusLista("Falha ao carregar a lista, tente recarregar a página.");
+		}
 	}
 
 	//ArrowFunction como método para receber valorPesquisa, evitando erro de propagação.
@@ -95,10 +110,11 @@ class App extends Component {
 	}
 
 	toggleModal () {
-  		this.setState({ modalAdicionarAberta: !this.state.modalAdicionarAberta });
+  		this.setState({ modalAdicionarAberta: !this.state.modalAdicionarAberta }, () => {
+  			this.loaderStatus("mensagemRecebida");
+  		});
 	}
 
-	//ArrowFunction como método para receber id, evitando erro de propagação.
 	toggleModalDelete = (item) => {
   		this.setState(
   			{ modalDeleteAberta: !this.state.modalDeleteAberta },
@@ -118,13 +134,13 @@ class App extends Component {
   			}
   		);
 	}
-	//Retornar resposta para faciliar testes.
-	deleteTool() {
+
+	async deleteTool() {
 		const { toolIdDelete } = this.state;
 
 		this.loaderStatus();
 
-		fetch(`/tools/${toolIdDelete}`,{
+		const deleteStatus = await fetch(`/tools/${toolIdDelete}`,{
 			method: "delete",
 			headers: {
 				'Content-Type': 'application/json'
@@ -133,14 +149,18 @@ class App extends Component {
 		.then(resp => {
 			this.getListaTools();
 
-			if (resp.status === 200) { this.loaderStatus("Sucesso!") }
-				else { this.loaderStatus(".") }
+			return resp.status;	
 		})
 		.catch(error => console.log(error));
+
+		if (deleteStatus === 200) { this.loaderStatus("Tool deletada com sucesso!") }
+		else { this.loaderStatus("Falha ao deletar.") }
 	}
 
-	adicionarTool = (form) => {
-		return fetch("/tools/",{
+	adicionarTool = async (form) => {
+		this.loaderStatus();
+
+		const addStatus = await fetch("/tools/",{
 			method: "post",
 			headers: {
 				'Content-Type': 'application/json'
@@ -150,9 +170,12 @@ class App extends Component {
 		.then(resp => {
 			this.getListaTools();
 
-			return resp.json();
+			return resp.status;
 		})
 		.catch(error => console.log(error));
+
+		if (addStatus === 201) { this.loaderStatus("Tool adicionada com sucesso!") }
+		else { this.loaderStatus("Falha ao adicionar.") }
 	}
 
 	//Adicionar teste.
@@ -166,11 +189,31 @@ class App extends Component {
 			} else { this.setState({ respostaFetchUsuario: mensagem }) }
 	}
 
+	//Adicionar teste.
+	loaderStatusLista = (mensagem = "loading") => {
+		if (mensagem === "loading") { this.setState({ isLoadingLista: true }) } 
+			else if ( mensagem === "mensagemRecebida") { 
+				this.setState({ 
+					isLoadingLista: false,
+					respostaLista: ""
+				});
+			} else { this.setState({ respostaLista: mensagem }) }
+	}
+
 	render() {
-		const { modalAdicionarAberta, modalDeleteAberta, toolsList, nomeTool, isLoading, respostaFetchUsuario } = this.state;
+		const { modalAdicionarAberta, 
+			modalDeleteAberta, 
+			toolsList, 
+			nomeTool, 
+			isLoading, 
+			respostaFetchUsuario,
+			respostaLista,
+			isLoadingLista 
+		} = this.state;
 
 		return(
 			<div>
+				<Particles className="particles" params={particlesOptions} />
 				<Vuttr 
 					abrirModal={() => this.toggleModal()} 
 					abrirModalDelete={ this.toggleModalDelete }
@@ -178,12 +221,16 @@ class App extends Component {
 					ref={this.ref}
 					pesquisaFiltradasTools={ this.pesquisaFiltradasTools }
 					toggleTagFiltro={ this.toggleTagFiltro }
+					isLoadingLista={ isLoadingLista }
+					respostaLista={ respostaLista }
 				/>
 				{modalAdicionarAberta &&
 					<ModalVuttr fecharModal={() =>this.toggleModal()}>
 						<AddTool 
 							fecharModal={() =>this.toggleModal()}
 							adicionarTool={ this.adicionarTool }
+							isLoading={ isLoading }
+							respostaFetchUsuario={ respostaFetchUsuario }
 						/>
 					</ModalVuttr>}
 				{modalDeleteAberta &&
@@ -201,12 +248,7 @@ class App extends Component {
 	}
 }
 export default App;
-
-//Ideias: 
-//Resetar input search box.-tentei
-//Na pesquisa por tag fazer um highlight tna tags achadas.-tentei
-//Quando adicionar mandar uma msg para o usuario.
-//Mensagens de validação para erros de conexão, depois do loading do aperta do botão.
-//Adicionar loading da lista.
-//Falta fazer teste dos eventos addTag, removeTag e validação e loader do Addtool.js.
-//Adicionar mensagem de lista vazia
+//Ideias:
+//-Paginação
+//-Favoritos
+//-Nav bar responsiva

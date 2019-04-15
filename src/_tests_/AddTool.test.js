@@ -1,5 +1,6 @@
 import React from 'react';
 import AddTool from '../componentes/AddTool';
+import LoadingComponent from '../componentes/LoadingComponent';
 import renderer from 'react-test-renderer';
 import { mount, render } from 'enzyme';
 
@@ -9,7 +10,9 @@ const fecharModal = jest.fn(),
 	}),
 	defaultProps = {
 		fecharModal,
-		adicionarTool
+		adicionarTool,
+		isLoading: false,
+		respostaFetchUsuario: ""
 	};
 
 const AddToolCriadorComponents = (props=defaultProps) =>{
@@ -41,5 +44,16 @@ describe(">>>AddTool.js", () => {
 		expect.assertions(2);
 		expect(adicionarTool).toHaveBeenCalled();
 		expect(fecharModal).toHaveBeenCalled();
+	});
+
+	it("+Verificando evento isLoading", () => {
+		const propsLoading = {
+			isLoading: true,
+			respostaFetchUsuario: "",
+			fecharModal
+		};
+		const AddToolLoading = render(<AddTool{...propsLoading } />);
+		
+		expect(AddToolLoading).toMatchSnapshot();
 	});
 });

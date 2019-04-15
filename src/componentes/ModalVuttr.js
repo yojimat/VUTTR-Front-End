@@ -52,7 +52,7 @@ class ModalVuttr extends Component {
   		return (
 	    <div className="modalOverlay">
 	      <div
-	        className="modal"
+	        className="modal w-50 center mb5 ba b--black-20 br4-l pb3 pt3 pr4"
 	        ref={node => (this.modal = node)}
 	      >
 	      	{children}

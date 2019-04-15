@@ -533,6 +533,7 @@ initialize {
                             "namespace": "http://www.w3.org/1999/xhtml",
                             "next": Object {
                               "attribs": Object {
+                                "style": "display:none",
                                 "type": "button",
                               },
                               "children": Array [
@@ -637,9 +638,11 @@ initialize {
                               "prev": [Circular],
                               "type": "tag",
                               "x-attribsNamespace": Object {
+                                "style": undefined,
                                 "type": undefined,
                               },
                               "x-attribsPrefix": Object {
+                                "style": undefined,
                                 "type": undefined,
                               },
                             },
@@ -1070,6 +1073,7 @@ initialize {
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
                             "attribs": Object {
+                              "style": "display:none",
                               "type": "button",
                             },
                             "children": Array [
@@ -1174,9 +1178,11 @@ initialize {
                             "prev": [Circular],
                             "type": "tag",
                             "x-attribsNamespace": Object {
+                              "style": undefined,
                               "type": undefined,
                             },
                             "x-attribsPrefix": Object {
+                              "style": undefined,
                               "type": undefined,
                             },
                           },
@@ -1674,6 +1680,7 @@ initialize {
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
                           "attribs": Object {
+                            "style": "display:none",
                             "type": "button",
                           },
                           "children": Array [
@@ -1778,9 +1785,11 @@ initialize {
                           "prev": [Circular],
                           "type": "tag",
                           "x-attribsNamespace": Object {
+                            "style": undefined,
                             "type": undefined,
                           },
                           "x-attribsPrefix": Object {
+                            "style": undefined,
                             "type": undefined,
                           },
                         },
@@ -2211,6 +2220,7 @@ initialize {
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": Object {
                         "attribs": Object {
+                          "style": "display:none",
                           "type": "button",
                         },
                         "children": Array [
@@ -2315,9 +2325,11 @@ initialize {
                         "prev": [Circular],
                         "type": "tag",
                         "x-attribsNamespace": Object {
+                          "style": undefined,
                           "type": undefined,
                         },
                         "x-attribsPrefix": Object {
+                          "style": undefined,
                           "type": undefined,
                         },
                       },
@@ -2815,6 +2827,7 @@ initialize {
                     "namespace": "http://www.w3.org/1999/xhtml",
                     "next": Object {
                       "attribs": Object {
+                        "style": "display:none",
                         "type": "button",
                       },
                       "children": Array [
@@ -2919,9 +2932,11 @@ initialize {
                       "prev": [Circular],
                       "type": "tag",
                       "x-attribsNamespace": Object {
+                        "style": undefined,
                         "type": undefined,
                       },
                       "x-attribsPrefix": Object {
+                        "style": undefined,
                         "type": undefined,
                       },
                     },
@@ -3304,6 +3319,7 @@ initialize {
                   "namespace": "http://www.w3.org/1999/xhtml",
                   "next": Object {
                     "attribs": Object {
+                      "style": "display:none",
                       "type": "button",
                     },
                     "children": Array [
@@ -3408,9 +3424,11 @@ initialize {
                     "prev": [Circular],
                     "type": "tag",
                     "x-attribsNamespace": Object {
+                      "style": undefined,
                       "type": undefined,
                     },
                     "x-attribsPrefix": Object {
+                      "style": undefined,
                       "type": undefined,
                     },
                   },
@@ -3908,6 +3926,7 @@ initialize {
                 "namespace": "http://www.w3.org/1999/xhtml",
                 "next": Object {
                   "attribs": Object {
+                    "style": "display:none",
                     "type": "button",
                   },
                   "children": Array [
@@ -4012,9 +4031,11 @@ initialize {
                   "prev": [Circular],
                   "type": "tag",
                   "x-attribsNamespace": Object {
+                    "style": undefined,
                     "type": undefined,
                   },
                   "x-attribsPrefix": Object {
+                    "style": undefined,
                     "type": undefined,
                   },
                 },
@@ -4388,6 +4409,7 @@ initialize {
               "namespace": "http://www.w3.org/1999/xhtml",
               "next": Object {
                 "attribs": Object {
+                  "style": "display:none",
                   "type": "button",
                 },
                 "children": Array [
@@ -4492,9 +4514,11 @@ initialize {
                 "prev": [Circular],
                 "type": "tag",
                 "x-attribsNamespace": Object {
+                  "style": undefined,
                   "type": undefined,
                 },
                 "x-attribsPrefix": Object {
+                  "style": undefined,
                   "type": undefined,
                 },
               },
@@ -4960,6 +4984,7 @@ initialize {
             },
             Object {
               "attribs": Object {
+                "style": "display:none",
                 "type": "button",
               },
               "children": Array [
@@ -5561,9 +5586,11 @@ initialize {
               },
               "type": "tag",
               "x-attribsNamespace": Object {
+                "style": undefined,
                 "type": undefined,
               },
               "x-attribsPrefix": Object {
+                "style": undefined,
                 "type": undefined,
               },
             },
@@ -5629,6 +5656,7 @@ initialize {
               "parent": [Circular],
               "prev": Object {
                 "attribs": Object {
+                  "style": "display:none",
                   "type": "button",
                 },
                 "children": Array [
@@ -6166,9 +6194,11 @@ initialize {
                 },
                 "type": "tag",
                 "x-attribsNamespace": Object {
+                  "style": undefined,
                   "type": undefined,
                 },
                 "x-attribsPrefix": Object {
+                  "style": undefined,
                   "type": undefined,
                 },
               },
@@ -6228,6 +6258,7 @@ initialize {
                 "parent": [Circular],
                 "prev": Object {
                   "attribs": Object {
+                    "style": "display:none",
                     "type": "button",
                   },
                   "children": Array [
@@ -6765,9 +6796,11 @@ initialize {
                   },
                   "type": "tag",
                   "x-attribsNamespace": Object {
+                    "style": undefined,
                     "type": undefined,
                   },
                   "x-attribsPrefix": Object {
+                    "style": undefined,
                     "type": undefined,
                   },
                 },
@@ -6829,6 +6862,7 @@ initialize {
                   "parent": [Circular],
                   "prev": Object {
                     "attribs": Object {
+                      "style": "display:none",
                       "type": "button",
                     },
                     "children": Array [
@@ -7366,9 +7400,11 @@ initialize {
                     },
                     "type": "tag",
                     "x-attribsNamespace": Object {
+                      "style": undefined,
                       "type": undefined,
                     },
                     "x-attribsPrefix": Object {
+                      "style": undefined,
                       "type": undefined,
                     },
                   },
@@ -7860,6 +7896,7 @@ initialize {
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
                             "attribs": Object {
+                              "style": "display:none",
                               "type": "button",
                             },
                             "children": Array [
@@ -7964,9 +8001,11 @@ initialize {
                             "prev": [Circular],
                             "type": "tag",
                             "x-attribsNamespace": Object {
+                              "style": undefined,
                               "type": undefined,
                             },
                             "x-attribsPrefix": Object {
+                              "style": undefined,
                               "type": undefined,
                             },
                           },
@@ -8397,6 +8436,7 @@ initialize {
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
                           "attribs": Object {
+                            "style": "display:none",
                             "type": "button",
                           },
                           "children": Array [
@@ -8501,9 +8541,11 @@ initialize {
                           "prev": [Circular],
                           "type": "tag",
                           "x-attribsNamespace": Object {
+                            "style": undefined,
                             "type": undefined,
                           },
                           "x-attribsPrefix": Object {
+                            "style": undefined,
                             "type": undefined,
                           },
                         },
@@ -9001,6 +9043,7 @@ initialize {
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": Object {
                         "attribs": Object {
+                          "style": "display:none",
                           "type": "button",
                         },
                         "children": Array [
@@ -9105,9 +9148,11 @@ initialize {
                         "prev": [Circular],
                         "type": "tag",
                         "x-attribsNamespace": Object {
+                          "style": undefined,
                           "type": undefined,
                         },
                         "x-attribsPrefix": Object {
+                          "style": undefined,
                           "type": undefined,
                         },
                       },
@@ -9538,6 +9583,7 @@ initialize {
                     "namespace": "http://www.w3.org/1999/xhtml",
                     "next": Object {
                       "attribs": Object {
+                        "style": "display:none",
                         "type": "button",
                       },
                       "children": Array [
@@ -9642,9 +9688,11 @@ initialize {
                       "prev": [Circular],
                       "type": "tag",
                       "x-attribsNamespace": Object {
+                        "style": undefined,
                         "type": undefined,
                       },
                       "x-attribsPrefix": Object {
+                        "style": undefined,
                         "type": undefined,
                       },
                     },
@@ -10142,6 +10190,7 @@ initialize {
                   "namespace": "http://www.w3.org/1999/xhtml",
                   "next": Object {
                     "attribs": Object {
+                      "style": "display:none",
                       "type": "button",
                     },
                     "children": Array [
@@ -10246,9 +10295,11 @@ initialize {
                     "prev": [Circular],
                     "type": "tag",
                     "x-attribsNamespace": Object {
+                      "style": undefined,
                       "type": undefined,
                     },
                     "x-attribsPrefix": Object {
+                      "style": undefined,
                       "type": undefined,
                     },
                   },
@@ -10631,6 +10682,7 @@ initialize {
                 "namespace": "http://www.w3.org/1999/xhtml",
                 "next": Object {
                   "attribs": Object {
+                    "style": "display:none",
                     "type": "button",
                   },
                   "children": Array [
@@ -10735,9 +10787,11 @@ initialize {
                   "prev": [Circular],
                   "type": "tag",
                   "x-attribsNamespace": Object {
+                    "style": undefined,
                     "type": undefined,
                   },
                   "x-attribsPrefix": Object {
+                    "style": undefined,
                     "type": undefined,
                   },
                 },
@@ -11235,6 +11289,7 @@ initialize {
               "namespace": "http://www.w3.org/1999/xhtml",
               "next": Object {
                 "attribs": Object {
+                  "style": "display:none",
                   "type": "button",
                 },
                 "children": Array [
@@ -11339,9 +11394,11 @@ initialize {
                 "prev": [Circular],
                 "type": "tag",
                 "x-attribsNamespace": Object {
+                  "style": undefined,
                   "type": undefined,
                 },
                 "x-attribsPrefix": Object {
+                  "style": undefined,
                   "type": undefined,
                 },
               },
@@ -11715,6 +11772,7 @@ initialize {
             "namespace": "http://www.w3.org/1999/xhtml",
             "next": Object {
               "attribs": Object {
+                "style": "display:none",
                 "type": "button",
               },
               "children": Array [
@@ -11819,9 +11877,11 @@ initialize {
               "prev": [Circular],
               "type": "tag",
               "x-attribsNamespace": Object {
+                "style": undefined,
                 "type": undefined,
               },
               "x-attribsPrefix": Object {
+                "style": undefined,
                 "type": undefined,
               },
             },
@@ -12287,6 +12347,7 @@ initialize {
           },
           Object {
             "attribs": Object {
+              "style": "display:none",
               "type": "button",
             },
             "children": Array [
@@ -12888,9 +12949,11 @@ initialize {
             },
             "type": "tag",
             "x-attribsNamespace": Object {
+              "style": undefined,
               "type": undefined,
             },
             "x-attribsPrefix": Object {
+              "style": undefined,
               "type": undefined,
             },
           },
@@ -12956,6 +13019,7 @@ initialize {
             "parent": [Circular],
             "prev": Object {
               "attribs": Object {
+                "style": "display:none",
                 "type": "button",
               },
               "children": Array [
@@ -13493,9 +13557,11 @@ initialize {
               },
               "type": "tag",
               "x-attribsNamespace": Object {
+                "style": undefined,
                 "type": undefined,
               },
               "x-attribsPrefix": Object {
+                "style": undefined,
                 "type": undefined,
               },
             },
@@ -13555,6 +13621,7 @@ initialize {
               "parent": [Circular],
               "prev": Object {
                 "attribs": Object {
+                  "style": "display:none",
                   "type": "button",
                 },
                 "children": Array [
@@ -14092,9 +14159,11 @@ initialize {
                 },
                 "type": "tag",
                 "x-attribsNamespace": Object {
+                  "style": undefined,
                   "type": undefined,
                 },
                 "x-attribsPrefix": Object {
+                  "style": undefined,
                   "type": undefined,
                 },
               },
@@ -14156,6 +14225,7 @@ initialize {
                 "parent": [Circular],
                 "prev": Object {
                   "attribs": Object {
+                    "style": "display:none",
                     "type": "button",
                   },
                   "children": Array [
@@ -14693,9 +14763,11 @@ initialize {
                   },
                   "type": "tag",
                   "x-attribsNamespace": Object {
+                    "style": undefined,
                     "type": undefined,
                   },
                   "x-attribsPrefix": Object {
+                    "style": undefined,
                     "type": undefined,
                   },
                 },
@@ -14815,6 +14887,51 @@ initialize {
       },
     ],
     "name": "section",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;
+
+exports[`>>>AddTool.js +Verificando evento isLoading 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "loader",
+    },
+    "children": Array [],
+    "name": "div",
     "namespace": "http://www.w3.org/1999/xhtml",
     "next": null,
     "parent": null,

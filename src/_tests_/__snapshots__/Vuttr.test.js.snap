@@ -72,7 +72,9 @@ ReactWrapper {
              Adicionar
           </button>
           <br />
-          <ul />
+          <span>
+            Lista vazia.
+          </span>
         </section>
       </div>,
       "key": undefined,
@@ -115,7 +117,9 @@ ReactWrapper {
                Adicionar
             </button>
             <br />
-            <ul />
+            <span>
+              Lista vazia.
+            </span>
           </section>,
         ],
         "className": "App",
@@ -205,7 +209,9 @@ ReactWrapper {
                Adicionar
             </button>
             <br />
-            <ul />
+            <span>
+              Lista vazia.
+            </span>
           </section>,
           "key": undefined,
           "nodeType": "host",
@@ -238,7 +244,9 @@ ReactWrapper {
                  Adicionar
               </button>,
               <br />,
-              <ul />,
+              <span>
+                Lista vazia.
+              </span>,
             ],
           },
           "ref": null,
@@ -370,17 +378,19 @@ ReactWrapper {
               "type": "br",
             },
             Object {
-              "instance": <ul />,
+              "instance": <span>
+                Lista vazia.
+              </span>,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [],
+                "children": "Lista vazia.",
               },
               "ref": null,
               "rendered": Array [
-                Array [],
+                "Lista vazia.",
               ],
-              "type": "ul",
+              "type": "span",
             },
           ],
           "type": "section",
@@ -446,7 +456,9 @@ ReactWrapper {
                Adicionar
             </button>
             <br />
-            <ul />
+            <span>
+              Lista vazia.
+            </span>
           </section>
         </div>,
         "key": undefined,
@@ -489,7 +501,9 @@ ReactWrapper {
                  Adicionar
               </button>
               <br />
-              <ul />
+              <span>
+                Lista vazia.
+              </span>
             </section>,
           ],
           "className": "App",
@@ -579,7 +593,9 @@ ReactWrapper {
                  Adicionar
               </button>
               <br />
-              <ul />
+              <span>
+                Lista vazia.
+              </span>
             </section>,
             "key": undefined,
             "nodeType": "host",
@@ -612,7 +628,9 @@ ReactWrapper {
                    Adicionar
                 </button>,
                 <br />,
-                <ul />,
+                <span>
+                  Lista vazia.
+                </span>,
               ],
             },
             "ref": null,
@@ -744,17 +762,19 @@ ReactWrapper {
                 "type": "br",
               },
               Object {
-                "instance": <ul />,
+                "instance": <span>
+                  Lista vazia.
+                </span>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": Array [],
+                  "children": "Lista vazia.",
                 },
                 "ref": null,
                 "rendered": Array [
-                  Array [],
+                  "Lista vazia.",
                 ],
-                "type": "ul",
+                "type": "span",
               },
             ],
             "type": "section",

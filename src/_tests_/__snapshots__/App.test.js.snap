@@ -41,7 +41,9 @@ exports[`>>>App.js +App renderiza normalmente. 1`] = `
          Adicionar
       </button>
       <br />
-      <ul />
+      <span>
+        Lista vazia.
+      </span>
     </section>
   </div>
 </div>

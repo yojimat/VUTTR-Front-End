@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import LoadingComponent from "./LoadingComponent";
 
 const modelTool = {
 	title: "",
@@ -11,16 +12,20 @@ const modelTool = {
 const tag = (index) => {
 	return(
 		<React.Fragment key={index}>
-			<Field type="text" name={`tags[${index}]`} placeholder=" Nome da Tag."/>
+			<Field type="text" name={`tags[${index}]`} placeholder=" Nome da Tag." className="mr0 ba b--black-20"/>
 		</React.Fragment>
 	);
 }
 
 
 const AddTool = ({...props }) => {
-	const { fecharModal, adicionarTool } = props;
-	let Tags = [tag];
-	const [TagsHook, setTag] = useState(Tags);
+	const { 
+		fecharModal, 
+		adicionarTool,
+		isLoading,
+		respostaFetchUsuario
+	} = props,
+		[TagsHook, setTag] = useState([tag]);
 
 	const listaAddTags = () => TagsHook.map((tag, i) => tag(i));
 	const adicionarTag = () => {
@@ -50,8 +55,14 @@ const AddTool = ({...props }) => {
 	}
 
 	return(
+		isLoading === true ?
+		<LoadingComponent 
+			respostaFetchUsuario={ respostaFetchUsuario }
+			fecharModal={ () => fecharModal()}
+		/>
+		:
 		<section className="addTool">
-			<h1>
+			<h1 className="azul-escuro">
 				<span role="img" aria-label="plus">➕</span>Nova Tool:
 			</h1>
 			<Formik
@@ -59,47 +70,66 @@ const AddTool = ({...props }) => {
 	    		validate={(values) => validacao(values)}
 	    		onSubmit={(values, actions) => {
 	    			adicionarTool(values)
-	    			.then(tool =>{
+	    			.then(status =>{
 	    				actions.setSubmitting(false);
-	    				fecharModal();
 	    			});
 	    		}}
 	    		render={({ errors, touched, isSubmitting }) => (
-		          	<Form>
+		          	<Form className="ml3">
 		          		<label>
 				            Nome: {' '}
-				            <Field type="text" name="title" placeholder=" Nome da Tool." />
-				            <ErrorMessage name="title" component="span" />  
+				            <Field type="text" name="title" placeholder=" Nome da Tool." className="ba b--black-20"/>
+				            <br />
+				            <ErrorMessage name="title" component="span"/>  
 			            </label>
 			            <br />
 			            <label>
 				            Link: {' '}
-				            <Field type="text" name="link" placeholder=" Link para a Tool." />
+				            <Field type="text" name="link" placeholder=" Link para a Tool." className="mt2 ba b--black-20" />
+				            <br />
 				            <ErrorMessage name="link" component="span" />
 			            </label>
 			            <br />
 			            <label>
 				            Descrição: {' '}
-				            <br />
-				            <Field name="description" component="textarea" placeholder=" Uma breve descrição da Tool." />
-			            </label>
+				        </label>
+				        <br />
+				        <Field name="description" component="textarea" placeholder=" Uma breve descrição da Tool." rows="4" cols="25" className="mb3 ba b--black-20"/>
 			            <br />
 			            <label>
-							Tags: {' '}
-							<br />
-            				{listaAddTags()}	
+							Tags: {' '}	
 			            </label>
-			            <button type="button" onClick={() => adicionarTag()}>
+			            <br />
+			            {listaAddTags()}
+			            <button type="button" 
+			            	onClick={() => adicionarTag()}
+			            	className="dim br-100 ph3 pv2 mb2 dib white bg-dark-green"
+			            	style={{ fontSize: "75%"}}
+			            >
 							<span role="img" aria-label="plus">➕</span>
 						</button>
-						<button type="button" onClick={() => removerTag()}>
+						<button 
+							type="button" 
+							onClick={() => removerTag()}
+							style={{ display: TagsHook.length > 1 ? "inline" : "none", fontSize: "75%" }}
+							className="dim br-100 ph3 pv2 mb2 dib white bg-vermelho"
+						>
 							<span role="img" aria-label="plus">➖</span>
 						</button>
 			            <br />
-			            <button type="submit" name="submit" disabled={isSubmitting}>
-			              Adicionar?
+			            <button type="button" 
+			            	onClick={fecharModal}
+			            	className="mt3 dim br3 ph3 pv2 mb2 dib black mr4 bg-amarelo"
+			            >
+			            	<span>Voltar</span>
 			            </button>
-			            <button type="button" onClick={fecharModal}>Voltar</button>
+			            <button type="submit" 
+			            	name="submit" 
+			            	disabled={isSubmitting}
+			            	className="dim br3 ph3 pv2 mb2 dib black bg-verde"
+			            >
+			              <span>Adicionar?</span>
+			            </button>
 		          	</Form>
 	          	)}
 	    	/>

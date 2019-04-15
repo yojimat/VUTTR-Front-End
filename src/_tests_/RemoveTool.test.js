@@ -1,7 +1,7 @@
 import React from 'react';
 import RemoveTool from '../componentes/RemoveTool';
 import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
+import { mount, render } from 'enzyme';
 
 const fecharModal = jest.fn(),
 	deleteTool = jest.fn(),
@@ -53,5 +53,16 @@ describe(">>>RemoveTool.js", () => {
 		const RemoveToolComponentDel = RemoveToolCriadorComponents().find('button + button');
     	RemoveToolComponentDel.simulate('click', deleteTool);
     	expect(deleteTool).toHaveBeenCalled();
+	});
+
+	it("+Verificando evento isLoading", () => {
+		const propsLoading = {
+			isLoading: true,
+			respostaFetchUsuario: "",
+			fecharModal
+		};
+		const removeToolLoading = render(<RemoveTool{...propsLoading } />);
+		
+		expect(removeToolLoading).toMatchSnapshot();
 	});
 });

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './LoadingComponent.css';
-///Aqui vou receber a mensagem e apos interação do usuario, volto uma mensagem para fechar o componente
 
 const LoadingComponent = ({ ...props }) => {
-	const { 
-		respostaFetchUsuario, 
+	const { respostaFetchUsuario, 
 		fecharModal 
 	} = props,
 		[timerLoad, setTimerLoad] = useState(false);
@@ -23,7 +21,15 @@ const LoadingComponent = ({ ...props }) => {
 		:
 		<>
 			<span>{ respostaFetchUsuario }</span>
-			<button type="button" onClick={ fecharModal }>Cancelar</button>
+			<br />
+			{fecharModal &&
+				<button type="button" 
+					onClick={ fecharModal }
+					className="dim br3 ph3 pv2 mb2 dib black mr4 bg-amarelo ml4 mt3"
+				>
+					Voltar
+				</button>
+			}
 		</>
 	);
 };
