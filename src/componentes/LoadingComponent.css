@@ -1,10 +1,11 @@
 .loader {
   	width: 75px;
   	height: 75px;
-  	border: 16px solid #f3f3f3; /* Light grey */
+  	border: 5px solid #FFFFFF; /* Light grey */
   	border-radius: 50%;
-  	border-top: 16px solid #3498db; /* Blue */
-  	border-bottom: 16px solid #3498db; /* Blue */
+  	border-top: 5px solid #365DF0; /* Blue */
+  	border-bottom: 5px solid #365DF0; /* Blue */
+    border-left : 5px solid #365DF0;
   	-webkit-animation: spin 2s linear infinite;
   	animation: spin 1s linear infinite;
     display: inline-block;

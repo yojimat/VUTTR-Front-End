@@ -1,0 +1,25 @@
+.inputsAdd {
+	border: 1px solid #F5F4F6;
+	background-color: #EBEAED;
+	padding: 0.25rem;
+}
+
+.inputsAdd::placeholder {
+	color: #B1ADB9;
+}
+
+.inputsAdd:focus {
+	border: 1px solid #EBEAED;
+	background-color: #DEDCE1;
+}
+
+.inputsAddError {
+	border: 1px solid #F95E5A;
+	background-color: #FEEFEE;
+	padding: 0.25rem;
+	color: #F95E5A;
+}
+
+.inputsAddError::placeholder {
+	color: #F95E5A;
+}

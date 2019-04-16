@@ -11,3 +11,10 @@ ul {
   	width: 100%
   }
 }
+.pesquisaInput {
+	background-image: url(../helpers/icones/lupaBossabox.svg);
+	background-repeat: no-repeat;
+	background-color: #F5F4F6;
+	padding-left: 30px;
+	border: 1px solid #EBEAED;
+}

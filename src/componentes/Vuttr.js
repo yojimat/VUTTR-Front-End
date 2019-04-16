@@ -24,7 +24,7 @@ const mapListView = (lista, abrirModalDelete) => {
           type="button" 
           onClick={ () => abrirModalDelete(item)} 
           id={item.id}
-          className="grow br-pill ba ph3 bw1 pv2 mb2 dib vermelho"
+          className="grow br2 ba ph3 pv2 mb2 dib bg-remove vermelho"
         >
           <span role="img" aria-label="plus">&#x2718; Remover</span>
         </button>
@@ -54,11 +54,11 @@ const Vuttr = React.forwardRef(({...props }, ref) => {
         <div>
           <input 
             type="search" 
-            placeholder="Pesquise aqui!"
+            placeholder="Pesquise aqui…"
             ref={node => ref = node}
             value={ref.value}
             onChange={() => pesquisaFiltradasTools(ref.value)}
-            className="ba b--black-20 mb2 "
+            className="mb2 pesquisaInput br1"
           />
           {' '}
           <input 
@@ -72,14 +72,14 @@ const Vuttr = React.forwardRef(({...props }, ref) => {
           {' '}
         </div>
         <br />
-        <button className="dim br3 ph3 pv2 mb2 dib white bg-add" 
+        <button className="grow br2 ph3 pv2 mb2 dib bg-add azul" 
           type="button" 
           onClick={ abrirModal }
         >
           <span role="img" aria-label="plus">➕ Adicionar Tool</span> 
         </button>
         <br />
-        <article className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4">
+        <article className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox">
           {isLoadingLista === true ?
             <LoadingComponent 
               respostaFetchUsuario={ respostaLista }

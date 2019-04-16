@@ -6,6 +6,7 @@ import RemoveTool from "./componentes/RemoveTool";
 import Particles from "react-particles-js";
 import particlesOptions from "./helpers/ParticlesOptions";
 import SocialSVG from "./helpers/LinkedinSVG";
+import LogoBossabox from "./helpers/icones/LogoBossabox.svg";
 import './App.css';
 
 class App extends Component {
@@ -252,7 +253,7 @@ class App extends Component {
     					<SocialSVG nomeSocial="Linkendin"/>
   					</a>
   					<br />
-  					<small>Projeto realizado para desafio do Bossabox.</small>
+  					<small>Projeto realizado para desafio do Bossabox.</small><img src={LogoBossabox} alt="check" height="46" width="36"/> 
 				</footer>
 			</div>
 		);

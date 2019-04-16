@@ -25,7 +25,7 @@ const LoadingComponent = ({ ...props }) => {
 			{fecharModal &&
 				<button type="button" 
 					onClick={ fecharModal }
-					className="dim br3 ph3 pv2 mb2 dib black mr4 bg-amarelo ml4 mt3"
+					className="br2 ph3 pv2 mb2 dib white mr4 bg-amarelo ml4 mt3"
 				>
 					Voltar
 				</button>

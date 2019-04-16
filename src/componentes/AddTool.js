@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Formik, Field, Form } from 'formik';
 import LoadingComponent from "./LoadingComponent";
+import LogoBossabox from "../helpers/icones/LogoBossabox.svg";
+import './AddTool.css';
 
 const modelTool = {
 	title: "",
@@ -12,7 +14,7 @@ const modelTool = {
 const tag = (index) => {
 	return(
 		<React.Fragment key={index}>
-			<Field type="text" name={`tags[${index}]`} placeholder=" Nome da Tag." className="mr0 ba b--black-20"/>
+			<Field type="text" name={`tags[${index}]`} placeholder="Nome da Tag." className="mr0 	inputsAdd br1"/>
 		</React.Fragment>
 	);
 }
@@ -25,7 +27,9 @@ const AddTool = ({...props }) => {
 		isLoading,
 		respostaFetchUsuario
 	} = props,
-		[TagsHook, setTag] = useState([tag]);
+		[TagsHook, setTag] = useState([tag]),
+		[nomeError, setnomeError] = useState(false),
+		[linkError, setLinkError] = useState(false);
 
 	const listaAddTags = () => TagsHook.map((tag, i) => tag(i));
 	const adicionarTag = () => {
@@ -44,11 +48,11 @@ const AddTool = ({...props }) => {
 	    let errors = {};
 
 		if (!values.title) {
-			errors.title = " Por favor, insira o Nome da Tool.";
+			errors.title = "Insira o Nome da Tool.";
 		}
 
 		if (!values.link) {
-			errors.link = " Por favor, insira um Link para Tool.";
+			errors.link = "Insira um Link para Tool.";
 		}
 
 		return errors;
@@ -63,7 +67,7 @@ const AddTool = ({...props }) => {
 		:
 		<section className="addTool">
 			<h1 className="azul-escuro">
-				<span role="img" aria-label="plus">➕</span>Nova Tool:
+				<img src={LogoBossabox} alt="check" height="70" width="60"/> Nova Tool:
 			</h1>
 			<Formik
 	    		initialValues={ modelTool }
@@ -78,36 +82,46 @@ const AddTool = ({...props }) => {
 		          	<Form className="ml3">
 		          		<label>
 				            Nome: {' '}
-				            <Field type="text" name="title" placeholder=" Nome da Tool." className="ba b--black-20"/>
-				            <br />
-				            <ErrorMessage name="title">
-				            	{msg => <span className="vermelho">{msg}<br /></span>}
-				            </ErrorMessage> 
-			            </label>
-			            <br />
+				        </label>
+				        <Field type="text" name="title" 
+				        	placeholder="Nome da Tool." 
+				        	className={nomeError ? "inputsAddError br1" : "inputsAdd br1"}/>
+				        <br />
+				        {errors.title && touched.title ? 
+           					[<small key="0" className="vermelho">{errors.title}<br /></small> , setnomeError(true)]	          
+           				: 
+           					setnomeError(false)
+           				}			            
+				        <br />
 			            <label>
 				            Link: {' '}
 				        </label>
-				        <Field type="text" name="link" placeholder=" Link para a Tool." className="mt2 ba b--black-20" />
+				        <Field type="text" 
+				        	name="link" 
+				        	placeholder="Link para a Tool." 
+				        	className={linkError ? "mt2 inputsAddError br1" : "mt2 inputsAdd br1"} />
 				        <br />
-				        <ErrorMessage name="link">
-				           	{msg => <span className="vermelho">{msg}<br /></span>}
-				        </ErrorMessage> 
+				        {errors.link && touched.link ? 
+           					[<small key="0" className="vermelho">{errors.link}<br /></small> , setLinkError(true)]	          
+           				: 
+           					setLinkError(false)
+           				}	 
 			            <br />
 			            <label>
 				            Descrição: {' '}
 				        </label>
 				        <br />
-				        <Field name="description" component="textarea" placeholder=" Uma breve descrição da Tool." rows="4" cols="25" className="mb3 ba b--black-20"/>
+				        <Field name="description" component="textarea" placeholder="Uma breve descrição da Tool." rows="4" cols="25" className="mb3 inputsAdd br1"/>
 			            <br />
 			            <label>
 							Tags: {' '}	
 			            </label>
 			            <br />
 			            {listaAddTags()}
+			            <br />
 			            <button type="button" 
 			            	onClick={() => adicionarTag()}
-			            	className="dim br-100 ph3 pv2 mb2 dib white bg-dark-green"
+			            	className="grow verde bg-white-verde mr2"
 			            	style={{ fontSize: "75%"}}
 			            >
 							<span role="img" aria-label="plus">➕</span>
@@ -116,23 +130,23 @@ const AddTool = ({...props }) => {
 							type="button" 
 							onClick={() => removerTag()}
 							style={{ display: TagsHook.length > 1 ? "inline" : "none", fontSize: "75%" }}
-							className="dim br-100 ph3 pv2 mb2 dib white bg-vermelho"
+							className="grow vermelho bg-remove"
 						>
 							<span role="img" aria-label="plus">➖</span>
 						</button>
 			            <br />
 			            <button type="button" 
 			            	onClick={fecharModal}
-			            	className="mt3 dim br3 ph3 pv2 mb2 dib black mr4 bg-amarelo"
+			            	className="mt3 br2 ph3 pv2 mb2 dib white mr4 bg-amarelo"
 			            >
 			            	<span>Voltar</span>
 			            </button>
 			            <button type="submit" 
 			            	name="submit" 
 			            	disabled={isSubmitting}
-			            	className="dim br3 ph3 pv2 mb2 dib black bg-verde"
+			            	className="br2 ph3 pv2 mb2 dib white bg-verde"
 			            >
-			              <span>Adicionar?</span>
+			              <span>Adicionar</span>
 			            </button>
 		          	</Form>
 	          	)}

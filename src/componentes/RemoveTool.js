@@ -1,5 +1,7 @@
 import React from 'react';
 import LoadingComponent from "./LoadingComponent";
+import Check from "../helpers/icones/Check.svg";
+import Close from "../helpers/icones/Close.svg";
 
 const RemoveTool = ({...props }) => {
 	const { isLoading,
@@ -20,15 +22,15 @@ const RemoveTool = ({...props }) => {
 				<p>Você tem certeza que quer remover <strong className="azul">{nomeTool}</strong> da lista?</p>
 				<button type="button" 
 					onClick={ fecharModal }
-					className="dim br3 ph3 pv2 mb2 dib black mr4 bg-amarelo"
+					className="br2 ph3 pv2 mb2 dib white mr4 bg-amarelo"
 				>
-					<span>Cancelar</span>
+					<span><img src={Close} alt="check" height="20" width="20"/>Cancelar</span>
 				</button>
 				<button type="submit" 
 					onClick={ deleteTool }
-					className="dim br3 ph3 pv2 mb2 dib black bg-vermelho"
+					className="br2 ph3 pv2 mb2 dib white bg-vermelho"
 				>
-					<span>Sim, deletar.</span>
+					<span><img src={Check} alt="check" height="20" width="20"/>Sim, deletar.</span>
 				</button>
 			</section>
 	);
