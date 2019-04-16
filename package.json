@@ -1,19 +1,21 @@
 {
   "name": "vuttr-front-end",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "formik": "^1.5.1",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-particles-js": "^2.5.1",
+    "formik": "^1.5.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-particles-js": "^2.6.0",
     "react-scripts": "^2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -24,11 +26,13 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "http://localhost:3000",
+  "proxy": "https://my-json-server.typicode.com/yojimat/demo/tools",
   "devDependencies": {
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.10.0",
-    "react-test-renderer": "^16.8.4",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "gh-pages": "^2.0.1",
+    "react-test-renderer": "^16.8.6",
     "tachyons": "^4.11.1"
-  }
+  },
+  "homepage": "https://yojimat.github.io/VUTTR-Front-End/"
 }
