@@ -80,15 +80,19 @@ const AddTool = ({...props }) => {
 				            Nome: {' '}
 				            <Field type="text" name="title" placeholder=" Nome da Tool." className="ba b--black-20"/>
 				            <br />
-				            <ErrorMessage name="title" component="span"/>  
+				            <ErrorMessage name="title">
+				            	{msg => <span className="vermelho">{msg}<br /></span>}
+				            </ErrorMessage> 
 			            </label>
 			            <br />
 			            <label>
 				            Link: {' '}
-				            <Field type="text" name="link" placeholder=" Link para a Tool." className="mt2 ba b--black-20" />
-				            <br />
-				            <ErrorMessage name="link" component="span" />
-			            </label>
+				        </label>
+				        <Field type="text" name="link" placeholder=" Link para a Tool." className="mt2 ba b--black-20" />
+				        <br />
+				        <ErrorMessage name="link">
+				           	{msg => <span className="vermelho">{msg}<br /></span>}
+				        </ErrorMessage> 
 			            <br />
 			            <label>
 				            Descrição: {' '}

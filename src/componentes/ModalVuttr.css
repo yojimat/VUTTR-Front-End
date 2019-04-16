@@ -57,3 +57,10 @@
     	width: 32rem;
     } 
 }
+@media (max-width: 576px) 
+{
+  .modal{
+    padding-top: 40vh;
+    width: 100vh;
+  }
+}

@@ -39,42 +39,61 @@ ReactWrapper {
         class="App"
       >
         <header>
-          <h1>
+          <h1
+            class="ink mt4 mb0 i fw1"
+          >
             VUTTR
           </h1>
-          <h2>
+          <h2
+            class="ink mt2 mb4 ttu tracked"
+          >
             Very Useful Tools to Remember
           </h2>
         </header>
         <section>
-          <input
-            placeholder="Pesquise aqui!"
-            type="search"
-            value=""
-          />
-           
-          <label>
+          <div>
             <input
+              class="ba b--black-20 mb2 "
+              placeholder="Pesquise aqui!"
+              type="search"
+              value=""
+            />
+             
+            <input
+              class="mr2"
               type="checkbox"
             />
-            Procurar com #tags?
-          </label>
-           
+            <label
+              class="lh-copy-l"
+            >
+              Procurar com #tags?
+            </label>
+             
+          </div>
+          <br />
           <button
+            class="dim br3 ph3 pv2 mb2 dib white bg-add"
             type="button"
           >
             <span
               aria-label="plus"
               role="img"
             >
-              ➕
+              ➕ Adicionar Tool
             </span>
-             Adicionar
           </button>
           <br />
-          <span>
-            Lista vazia.
-          </span>
+          <article
+            class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+          >
+            <div
+              class="pa2"
+            >
+              <span>
+                Lista vazia.
+              </span>
+            </div>
+          </article>
         </section>
       </div>,
       "key": undefined,
@@ -82,29 +101,41 @@ ReactWrapper {
       "props": Object {
         "children": Array [
           <header>
-            <h1>
+            <h1
+              className="ink mt4 mb0 i fw1"
+            >
               VUTTR
             </h1>
-            <h2>
+            <h2
+              className="ink mt2 mb4 ttu tracked"
+            >
               Very Useful Tools to Remember
             </h2>
           </header>,
           <section>
-            <input
-              onChange={[Function]}
-              placeholder="Pesquise aqui!"
-              type="search"
-            />
-             
-            <label>
+            <div>
               <input
+                className="ba b--black-20 mb2 "
+                onChange={[Function]}
+                placeholder="Pesquise aqui!"
+                type="search"
+              />
+               
+              <input
+                className="mr2"
                 onChange={[Function]}
                 type="checkbox"
               />
-              Procurar com #tags?
-            </label>
-             
+              <label
+                className="lh-copy-l"
+              >
+                Procurar com #tags?
+              </label>
+               
+            </div>
+            <br />
             <button
+              className="dim br3 ph3 pv2 mb2 dib white bg-add"
               onClick={[MockFunction]}
               type="button"
             >
@@ -112,14 +143,21 @@ ReactWrapper {
                 aria-label="plus"
                 role="img"
               >
-                ➕
+                ➕ Adicionar Tool
               </span>
-               Adicionar
             </button>
             <br />
-            <span>
-              Lista vazia.
-            </span>
+            <article
+              className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+            >
+              <div
+                className="pa2"
+              >
+                <span>
+                  Lista vazia.
+                </span>
+              </div>
+            </article>
           </section>,
         ],
         "className": "App",
@@ -128,10 +166,14 @@ ReactWrapper {
       "rendered": Array [
         Object {
           "instance": <header>
-            <h1>
+            <h1
+              class="ink mt4 mb0 i fw1"
+            >
               VUTTR
             </h1>
-            <h2>
+            <h2
+              class="ink mt2 mb4 ttu tracked"
+            >
               Very Useful Tools to Remember
             </h2>
           </header>,
@@ -139,10 +181,14 @@ ReactWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h1>
+              <h1
+                className="ink mt4 mb0 i fw1"
+              >
                 VUTTR
               </h1>,
-              <h2>
+              <h2
+                className="ink mt2 mb4 ttu tracked"
+              >
                 Very Useful Tools to Remember
               </h2>,
             ],
@@ -150,13 +196,16 @@ ReactWrapper {
           "ref": null,
           "rendered": Array [
             Object {
-              "instance": <h1>
+              "instance": <h1
+                class="ink mt4 mb0 i fw1"
+              >
                 VUTTR
               </h1>,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": "VUTTR",
+                "className": "ink mt4 mb0 i fw1",
               },
               "ref": null,
               "rendered": Array [
@@ -165,13 +214,16 @@ ReactWrapper {
               "type": "h1",
             },
             Object {
-              "instance": <h2>
+              "instance": <h2
+                class="ink mt2 mb4 ttu tracked"
+              >
                 Very Useful Tools to Remember
               </h2>,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": "Very Useful Tools to Remember",
+                "className": "ink mt2 mb4 ttu tracked",
               },
               "ref": null,
               "rendered": Array [
@@ -184,54 +236,77 @@ ReactWrapper {
         },
         Object {
           "instance": <section>
-            <input
-              placeholder="Pesquise aqui!"
-              type="search"
-              value=""
-            />
-             
-            <label>
+            <div>
               <input
+                class="ba b--black-20 mb2 "
+                placeholder="Pesquise aqui!"
+                type="search"
+                value=""
+              />
+               
+              <input
+                class="mr2"
                 type="checkbox"
               />
-              Procurar com #tags?
-            </label>
-             
+              <label
+                class="lh-copy-l"
+              >
+                Procurar com #tags?
+              </label>
+               
+            </div>
+            <br />
             <button
+              class="dim br3 ph3 pv2 mb2 dib white bg-add"
               type="button"
             >
               <span
                 aria-label="plus"
                 role="img"
               >
-                ➕
+                ➕ Adicionar Tool
               </span>
-               Adicionar
             </button>
             <br />
-            <span>
-              Lista vazia.
-            </span>
+            <article
+              class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+            >
+              <div
+                class="pa2"
+              >
+                <span>
+                  Lista vazia.
+                </span>
+              </div>
+            </article>
           </section>,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <input
-                onChange={[Function]}
-                placeholder="Pesquise aqui!"
-                type="search"
-              />,
-              " ",
-              <label>
+              <div>
                 <input
+                  className="ba b--black-20 mb2 "
+                  onChange={[Function]}
+                  placeholder="Pesquise aqui!"
+                  type="search"
+                />
+                 
+                <input
+                  className="mr2"
                   onChange={[Function]}
                   type="checkbox"
                 />
-                Procurar com #tags?
-              </label>,
-              " ",
+                <label
+                  className="lh-copy-l"
+                >
+                  Procurar com #tags?
+                </label>
+                 
+              </div>,
+              <br />,
               <button
+                className="dim br3 ph3 pv2 mb2 dib white bg-add"
                 onClick={[MockFunction]}
                 type="button"
               >
@@ -239,66 +314,103 @@ ReactWrapper {
                   aria-label="plus"
                   role="img"
                 >
-                  ➕
+                  ➕ Adicionar Tool
                 </span>
-                 Adicionar
               </button>,
               <br />,
-              <span>
-                Lista vazia.
-              </span>,
+              <article
+                className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+              >
+                <div
+                  className="pa2"
+                >
+                  <span>
+                    Lista vazia.
+                  </span>
+                </div>
+              </article>,
             ],
           },
           "ref": null,
           "rendered": Array [
             Object {
-              "instance": <input
-                placeholder="Pesquise aqui!"
-                type="search"
-                value=""
-              />,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "onChange": [Function],
-                "placeholder": "Pesquise aqui!",
-                "type": "search",
-                "value": undefined,
-              },
-              "ref": [Function],
-              "rendered": Array [
-                undefined,
-              ],
-              "type": "input",
-            },
-            " ",
-            Object {
-              "instance": <label>
+              "instance": <div>
                 <input
+                  class="ba b--black-20 mb2 "
+                  placeholder="Pesquise aqui!"
+                  type="search"
+                  value=""
+                />
+                 
+                <input
+                  class="mr2"
                   type="checkbox"
                 />
-                Procurar com #tags?
-              </label>,
+                <label
+                  class="lh-copy-l"
+                >
+                  Procurar com #tags?
+                </label>
+                 
+              </div>,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
                   <input
+                    className="ba b--black-20 mb2 "
+                    onChange={[Function]}
+                    placeholder="Pesquise aqui!"
+                    type="search"
+                  />,
+                  " ",
+                  <input
+                    className="mr2"
                     onChange={[Function]}
                     type="checkbox"
                   />,
-                  "Procurar com #tags?",
+                  <label
+                    className="lh-copy-l"
+                  >
+                    Procurar com #tags?
+                  </label>,
+                  " ",
                 ],
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": <input
+                    class="ba b--black-20 mb2 "
+                    placeholder="Pesquise aqui!"
+                    type="search"
+                    value=""
+                  />,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "ba b--black-20 mb2 ",
+                    "onChange": [Function],
+                    "placeholder": "Pesquise aqui!",
+                    "type": "search",
+                    "value": undefined,
+                  },
+                  "ref": [Function],
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "input",
+                },
+                " ",
+                Object {
+                  "instance": <input
+                    class="mr2"
                     type="checkbox"
                   />,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "className": "mr2",
                     "onChange": [Function],
                     "type": "checkbox",
                   },
@@ -308,35 +420,61 @@ ReactWrapper {
                   ],
                   "type": "input",
                 },
-                "Procurar com #tags?",
+                Object {
+                  "instance": <label
+                    class="lh-copy-l"
+                  >
+                    Procurar com #tags?
+                  </label>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Procurar com #tags?",
+                    "className": "lh-copy-l",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Procurar com #tags?",
+                  ],
+                  "type": "label",
+                },
+                " ",
               ],
-              "type": "label",
+              "type": "div",
             },
-            " ",
+            Object {
+              "instance": <br />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "br",
+            },
             Object {
               "instance": <button
+                class="dim br3 ph3 pv2 mb2 dib white bg-add"
                 type="button"
               >
                 <span
                   aria-label="plus"
                   role="img"
                 >
-                  ➕
+                  ➕ Adicionar Tool
                 </span>
-                 Adicionar
               </button>,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <span
-                    aria-label="plus"
-                    role="img"
-                  >
-                    ➕
-                  </span>,
-                  " Adicionar",
-                ],
+                "children": <span
+                  aria-label="plus"
+                  role="img"
+                >
+                  ➕ Adicionar Tool
+                </span>,
+                "className": "dim br3 ph3 pv2 mb2 dib white bg-add",
                 "onClick": [MockFunction],
                 "type": "button",
               },
@@ -347,22 +485,21 @@ ReactWrapper {
                     aria-label="plus"
                     role="img"
                   >
-                    ➕
+                    ➕ Adicionar Tool
                   </span>,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "aria-label": "plus",
-                    "children": "➕",
+                    "children": "➕ Adicionar Tool",
                     "role": "img",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "➕",
+                    "➕ Adicionar Tool",
                   ],
                   "type": "span",
                 },
-                " Adicionar",
               ],
               "type": "button",
             },
@@ -378,19 +515,69 @@ ReactWrapper {
               "type": "br",
             },
             Object {
-              "instance": <span>
-                Lista vazia.
-              </span>,
+              "instance": <article
+                class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+              >
+                <div
+                  class="pa2"
+                >
+                  <span>
+                    Lista vazia.
+                  </span>
+                </div>
+              </article>,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Lista vazia.",
+                "children": <div
+                  className="pa2"
+                >
+                  <span>
+                    Lista vazia.
+                  </span>
+                </div>,
+                "className": "bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4",
               },
               "ref": null,
               "rendered": Array [
-                "Lista vazia.",
+                Object {
+                  "instance": <div
+                    class="pa2"
+                  >
+                    <span>
+                      Lista vazia.
+                    </span>
+                  </div>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <span>
+                      Lista vazia.
+                    </span>,
+                    "className": "pa2",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <span>
+                        Lista vazia.
+                      </span>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Lista vazia.",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Lista vazia.",
+                      ],
+                      "type": "span",
+                    },
+                  ],
+                  "type": "div",
+                },
               ],
-              "type": "span",
+              "type": "article",
             },
           ],
           "type": "section",
@@ -423,42 +610,61 @@ ReactWrapper {
           class="App"
         >
           <header>
-            <h1>
+            <h1
+              class="ink mt4 mb0 i fw1"
+            >
               VUTTR
             </h1>
-            <h2>
+            <h2
+              class="ink mt2 mb4 ttu tracked"
+            >
               Very Useful Tools to Remember
             </h2>
           </header>
           <section>
-            <input
-              placeholder="Pesquise aqui!"
-              type="search"
-              value=""
-            />
-             
-            <label>
+            <div>
               <input
+                class="ba b--black-20 mb2 "
+                placeholder="Pesquise aqui!"
+                type="search"
+                value=""
+              />
+               
+              <input
+                class="mr2"
                 type="checkbox"
               />
-              Procurar com #tags?
-            </label>
-             
+              <label
+                class="lh-copy-l"
+              >
+                Procurar com #tags?
+              </label>
+               
+            </div>
+            <br />
             <button
+              class="dim br3 ph3 pv2 mb2 dib white bg-add"
               type="button"
             >
               <span
                 aria-label="plus"
                 role="img"
               >
-                ➕
+                ➕ Adicionar Tool
               </span>
-               Adicionar
             </button>
             <br />
-            <span>
-              Lista vazia.
-            </span>
+            <article
+              class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+            >
+              <div
+                class="pa2"
+              >
+                <span>
+                  Lista vazia.
+                </span>
+              </div>
+            </article>
           </section>
         </div>,
         "key": undefined,
@@ -466,29 +672,41 @@ ReactWrapper {
         "props": Object {
           "children": Array [
             <header>
-              <h1>
+              <h1
+                className="ink mt4 mb0 i fw1"
+              >
                 VUTTR
               </h1>
-              <h2>
+              <h2
+                className="ink mt2 mb4 ttu tracked"
+              >
                 Very Useful Tools to Remember
               </h2>
             </header>,
             <section>
-              <input
-                onChange={[Function]}
-                placeholder="Pesquise aqui!"
-                type="search"
-              />
-               
-              <label>
+              <div>
                 <input
+                  className="ba b--black-20 mb2 "
+                  onChange={[Function]}
+                  placeholder="Pesquise aqui!"
+                  type="search"
+                />
+                 
+                <input
+                  className="mr2"
                   onChange={[Function]}
                   type="checkbox"
                 />
-                Procurar com #tags?
-              </label>
-               
+                <label
+                  className="lh-copy-l"
+                >
+                  Procurar com #tags?
+                </label>
+                 
+              </div>
+              <br />
               <button
+                className="dim br3 ph3 pv2 mb2 dib white bg-add"
                 onClick={[MockFunction]}
                 type="button"
               >
@@ -496,14 +714,21 @@ ReactWrapper {
                   aria-label="plus"
                   role="img"
                 >
-                  ➕
+                  ➕ Adicionar Tool
                 </span>
-                 Adicionar
               </button>
               <br />
-              <span>
-                Lista vazia.
-              </span>
+              <article
+                className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+              >
+                <div
+                  className="pa2"
+                >
+                  <span>
+                    Lista vazia.
+                  </span>
+                </div>
+              </article>
             </section>,
           ],
           "className": "App",
@@ -512,10 +737,14 @@ ReactWrapper {
         "rendered": Array [
           Object {
             "instance": <header>
-              <h1>
+              <h1
+                class="ink mt4 mb0 i fw1"
+              >
                 VUTTR
               </h1>
-              <h2>
+              <h2
+                class="ink mt2 mb4 ttu tracked"
+              >
                 Very Useful Tools to Remember
               </h2>
             </header>,
@@ -523,10 +752,14 @@ ReactWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <h1>
+                <h1
+                  className="ink mt4 mb0 i fw1"
+                >
                   VUTTR
                 </h1>,
-                <h2>
+                <h2
+                  className="ink mt2 mb4 ttu tracked"
+                >
                   Very Useful Tools to Remember
                 </h2>,
               ],
@@ -534,13 +767,16 @@ ReactWrapper {
             "ref": null,
             "rendered": Array [
               Object {
-                "instance": <h1>
+                "instance": <h1
+                  class="ink mt4 mb0 i fw1"
+                >
                   VUTTR
                 </h1>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": "VUTTR",
+                  "className": "ink mt4 mb0 i fw1",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -549,13 +785,16 @@ ReactWrapper {
                 "type": "h1",
               },
               Object {
-                "instance": <h2>
+                "instance": <h2
+                  class="ink mt2 mb4 ttu tracked"
+                >
                   Very Useful Tools to Remember
                 </h2>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": "Very Useful Tools to Remember",
+                  "className": "ink mt2 mb4 ttu tracked",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -568,54 +807,77 @@ ReactWrapper {
           },
           Object {
             "instance": <section>
-              <input
-                placeholder="Pesquise aqui!"
-                type="search"
-                value=""
-              />
-               
-              <label>
+              <div>
                 <input
+                  class="ba b--black-20 mb2 "
+                  placeholder="Pesquise aqui!"
+                  type="search"
+                  value=""
+                />
+                 
+                <input
+                  class="mr2"
                   type="checkbox"
                 />
-                Procurar com #tags?
-              </label>
-               
+                <label
+                  class="lh-copy-l"
+                >
+                  Procurar com #tags?
+                </label>
+                 
+              </div>
+              <br />
               <button
+                class="dim br3 ph3 pv2 mb2 dib white bg-add"
                 type="button"
               >
                 <span
                   aria-label="plus"
                   role="img"
                 >
-                  ➕
+                  ➕ Adicionar Tool
                 </span>
-                 Adicionar
               </button>
               <br />
-              <span>
-                Lista vazia.
-              </span>
+              <article
+                class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+              >
+                <div
+                  class="pa2"
+                >
+                  <span>
+                    Lista vazia.
+                  </span>
+                </div>
+              </article>
             </section>,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <input
-                  onChange={[Function]}
-                  placeholder="Pesquise aqui!"
-                  type="search"
-                />,
-                " ",
-                <label>
+                <div>
                   <input
+                    className="ba b--black-20 mb2 "
+                    onChange={[Function]}
+                    placeholder="Pesquise aqui!"
+                    type="search"
+                  />
+                   
+                  <input
+                    className="mr2"
                     onChange={[Function]}
                     type="checkbox"
                   />
-                  Procurar com #tags?
-                </label>,
-                " ",
+                  <label
+                    className="lh-copy-l"
+                  >
+                    Procurar com #tags?
+                  </label>
+                   
+                </div>,
+                <br />,
                 <button
+                  className="dim br3 ph3 pv2 mb2 dib white bg-add"
                   onClick={[MockFunction]}
                   type="button"
                 >
@@ -623,66 +885,103 @@ ReactWrapper {
                     aria-label="plus"
                     role="img"
                   >
-                    ➕
+                    ➕ Adicionar Tool
                   </span>
-                   Adicionar
                 </button>,
                 <br />,
-                <span>
-                  Lista vazia.
-                </span>,
+                <article
+                  className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+                >
+                  <div
+                    className="pa2"
+                  >
+                    <span>
+                      Lista vazia.
+                    </span>
+                  </div>
+                </article>,
               ],
             },
             "ref": null,
             "rendered": Array [
               Object {
-                "instance": <input
-                  placeholder="Pesquise aqui!"
-                  type="search"
-                  value=""
-                />,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "onChange": [Function],
-                  "placeholder": "Pesquise aqui!",
-                  "type": "search",
-                  "value": undefined,
-                },
-                "ref": [Function],
-                "rendered": Array [
-                  undefined,
-                ],
-                "type": "input",
-              },
-              " ",
-              Object {
-                "instance": <label>
+                "instance": <div>
                   <input
+                    class="ba b--black-20 mb2 "
+                    placeholder="Pesquise aqui!"
+                    type="search"
+                    value=""
+                  />
+                   
+                  <input
+                    class="mr2"
                     type="checkbox"
                   />
-                  Procurar com #tags?
-                </label>,
+                  <label
+                    class="lh-copy-l"
+                  >
+                    Procurar com #tags?
+                  </label>
+                   
+                </div>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     <input
+                      className="ba b--black-20 mb2 "
+                      onChange={[Function]}
+                      placeholder="Pesquise aqui!"
+                      type="search"
+                    />,
+                    " ",
+                    <input
+                      className="mr2"
                       onChange={[Function]}
                       type="checkbox"
                     />,
-                    "Procurar com #tags?",
+                    <label
+                      className="lh-copy-l"
+                    >
+                      Procurar com #tags?
+                    </label>,
+                    " ",
                   ],
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": <input
+                      class="ba b--black-20 mb2 "
+                      placeholder="Pesquise aqui!"
+                      type="search"
+                      value=""
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "ba b--black-20 mb2 ",
+                      "onChange": [Function],
+                      "placeholder": "Pesquise aqui!",
+                      "type": "search",
+                      "value": undefined,
+                    },
+                    "ref": [Function],
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "input",
+                  },
+                  " ",
+                  Object {
+                    "instance": <input
+                      class="mr2"
                       type="checkbox"
                     />,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "className": "mr2",
                       "onChange": [Function],
                       "type": "checkbox",
                     },
@@ -692,35 +991,61 @@ ReactWrapper {
                     ],
                     "type": "input",
                   },
-                  "Procurar com #tags?",
+                  Object {
+                    "instance": <label
+                      class="lh-copy-l"
+                    >
+                      Procurar com #tags?
+                    </label>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Procurar com #tags?",
+                      "className": "lh-copy-l",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Procurar com #tags?",
+                    ],
+                    "type": "label",
+                  },
+                  " ",
                 ],
-                "type": "label",
+                "type": "div",
               },
-              " ",
+              Object {
+                "instance": <br />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "br",
+              },
               Object {
                 "instance": <button
+                  class="dim br3 ph3 pv2 mb2 dib white bg-add"
                   type="button"
                 >
                   <span
                     aria-label="plus"
                     role="img"
                   >
-                    ➕
+                    ➕ Adicionar Tool
                   </span>
-                   Adicionar
                 </button>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": Array [
-                    <span
-                      aria-label="plus"
-                      role="img"
-                    >
-                      ➕
-                    </span>,
-                    " Adicionar",
-                  ],
+                  "children": <span
+                    aria-label="plus"
+                    role="img"
+                  >
+                    ➕ Adicionar Tool
+                  </span>,
+                  "className": "dim br3 ph3 pv2 mb2 dib white bg-add",
                   "onClick": [MockFunction],
                   "type": "button",
                 },
@@ -731,22 +1056,21 @@ ReactWrapper {
                       aria-label="plus"
                       role="img"
                     >
-                      ➕
+                      ➕ Adicionar Tool
                     </span>,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "aria-label": "plus",
-                      "children": "➕",
+                      "children": "➕ Adicionar Tool",
                       "role": "img",
                     },
                     "ref": null,
                     "rendered": Array [
-                      "➕",
+                      "➕ Adicionar Tool",
                     ],
                     "type": "span",
                   },
-                  " Adicionar",
                 ],
                 "type": "button",
               },
@@ -762,19 +1086,69 @@ ReactWrapper {
                 "type": "br",
               },
               Object {
-                "instance": <span>
-                  Lista vazia.
-                </span>,
+                "instance": <article
+                  class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+                >
+                  <div
+                    class="pa2"
+                  >
+                    <span>
+                      Lista vazia.
+                    </span>
+                  </div>
+                </article>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Lista vazia.",
+                  "children": <div
+                    className="pa2"
+                  >
+                    <span>
+                      Lista vazia.
+                    </span>
+                  </div>,
+                  "className": "bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Lista vazia.",
+                  Object {
+                    "instance": <div
+                      class="pa2"
+                    >
+                      <span>
+                        Lista vazia.
+                      </span>
+                    </div>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <span>
+                        Lista vazia.
+                      </span>,
+                      "className": "pa2",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": <span>
+                          Lista vazia.
+                        </span>,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Lista vazia.",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Lista vazia.",
+                        ],
+                        "type": "span",
+                      },
+                    ],
+                    "type": "div",
+                  },
                 ],
-                "type": "span",
+                "type": "article",
               },
             ],
             "type": "section",

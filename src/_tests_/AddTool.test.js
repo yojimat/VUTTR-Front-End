@@ -28,7 +28,7 @@ describe(">>>AddTool.js", () => {
 	});
 
 	it("+Verificando evento fecharModal", () => {
-		const AddToolDel = AddToolCriadorComponents().find("button:last-child");
+		const AddToolDel = AddToolCriadorComponents().find(".bg-amarelo");
 
 		expect(AddToolDel).toHaveLength(1);
 		AddToolDel.simulate('click', fecharModal);

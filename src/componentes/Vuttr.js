@@ -79,7 +79,7 @@ const Vuttr = React.forwardRef(({...props }, ref) => {
           <span role="img" aria-label="plus">➕ Adicionar Tool</span> 
         </button>
         <br />
-        <article className="bg-branco-escuro w-50 center mb5 o-90 ba b--black-20 br4-l pr4">
+        <article className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4">
           {isLoadingLista === true ?
             <LoadingComponent 
               respostaFetchUsuario={ respostaLista }

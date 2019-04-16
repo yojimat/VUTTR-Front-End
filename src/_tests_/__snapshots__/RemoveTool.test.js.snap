@@ -6,17 +6,26 @@ exports[`>>>RemoveTool.js +RemoveTool renderiza normalmente. 1`] = `
 >
   <p>
     Você tem certeza que quer remover 
+    <strong
+      className="azul"
+    />
      da lista?
   </p>
   <button
+    className="dim br3 ph3 pv2 mb2 dib black mr4 bg-amarelo"
     type="button"
   >
-    Cancelar
+    <span>
+      Cancelar
+    </span>
   </button>
   <button
+    className="dim br3 ph3 pv2 mb2 dib black bg-vermelho"
     type="submit"
   >
-    Sim, deletar.
+    <span>
+      Sim, deletar.
+    </span>
   </button>
 </section>
 `;

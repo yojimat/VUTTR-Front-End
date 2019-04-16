@@ -5,6 +5,7 @@ import AddTool from "./componentes/AddTool";
 import RemoveTool from "./componentes/RemoveTool";
 import Particles from "react-particles-js";
 import particlesOptions from "./helpers/ParticlesOptions";
+import SocialSVG from "./helpers/LinkedinSVG";
 import './App.css';
 
 class App extends Component {
@@ -243,6 +244,16 @@ class App extends Component {
 							respostaFetchUsuario={ respostaFetchUsuario }
 						/>
 					</ModalVuttr>}
+				<footer className="pb4 ph3 ph5-ns tc">
+					<a className="link near-black hover-silver dib h2 w2 mr3" href="https://github.com/yojimat" title="GitHub" target="blank">
+    					<SocialSVG nomeSocial="GitHub"/>
+  					</a>
+  					<a className="link hover-silver near-black dib h2 w2 mr3" href="https://www.linkedin.com/in/vntc-fullstack/" title="Linkedin" target="blank">
+    					<SocialSVG nomeSocial="Linkendin"/>
+  					</a>
+  					<br />
+  					<small>Projeto realizado para desafio do Bossabox.</small>
+				</footer>
 			</div>
 		);
 	}
