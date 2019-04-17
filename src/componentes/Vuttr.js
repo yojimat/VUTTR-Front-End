@@ -1,5 +1,6 @@
 import React from 'react';
 import LoadingComponent from "./LoadingComponent";
+import Link from "../helpers/icones/Link.svg";
 import './Vuttr.css';
 
 const mapListView = (lista, abrirModalDelete) => {
@@ -15,7 +16,7 @@ const mapListView = (lista, abrirModalDelete) => {
             target="blank"
             className="azul link"
           >
-            {item.title}
+            <img src={Link} alt="check" height="22" width="52"/> {item.title}
           </a>
         </h3>
         <p>{item.description}</p>
