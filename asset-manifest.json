@@ -1,15 +1,20 @@
 {
-  "main.css": "/VUTTR-Front-End/static/css/main.cb89c526.chunk.css",
-  "main.js": "/VUTTR-Front-End/static/js/main.aa680d1b.chunk.js",
-  "main.js.map": "/VUTTR-Front-End/static/js/main.aa680d1b.chunk.js.map",
+  "main.css": "/VUTTR-Front-End/static/css/main.2fb56aea.chunk.css",
+  "main.js": "/VUTTR-Front-End/static/js/main.b97062f8.chunk.js",
+  "main.js.map": "/VUTTR-Front-End/static/js/main.b97062f8.chunk.js.map",
   "runtime~main.js": "/VUTTR-Front-End/static/js/runtime~main.f40efcd3.js",
   "runtime~main.js.map": "/VUTTR-Front-End/static/js/runtime~main.f40efcd3.js.map",
   "static/css/2.a9e86afa.chunk.css": "/VUTTR-Front-End/static/css/2.a9e86afa.chunk.css",
-  "static/js/2.dfd43a7e.chunk.js": "/VUTTR-Front-End/static/js/2.dfd43a7e.chunk.js",
-  "static/js/2.dfd43a7e.chunk.js.map": "/VUTTR-Front-End/static/js/2.dfd43a7e.chunk.js.map",
+  "static/js/2.07f98dcc.chunk.js": "/VUTTR-Front-End/static/js/2.07f98dcc.chunk.js",
+  "static/js/2.07f98dcc.chunk.js.map": "/VUTTR-Front-End/static/js/2.07f98dcc.chunk.js.map",
   "index.html": "/VUTTR-Front-End/index.html",
-  "precache-manifest.c534ba869d42d032993e709b1e0eb86d.js": "/VUTTR-Front-End/precache-manifest.c534ba869d42d032993e709b1e0eb86d.js",
+  "precache-manifest.bd72660b791264c4563b6d20aff2f00e.js": "/VUTTR-Front-End/precache-manifest.bd72660b791264c4563b6d20aff2f00e.js",
   "service-worker.js": "/VUTTR-Front-End/service-worker.js",
   "static/css/2.a9e86afa.chunk.css.map": "/VUTTR-Front-End/static/css/2.a9e86afa.chunk.css.map",
-  "static/css/main.cb89c526.chunk.css.map": "/VUTTR-Front-End/static/css/main.cb89c526.chunk.css.map"
+  "static/css/main.2fb56aea.chunk.css.map": "/VUTTR-Front-End/static/css/main.2fb56aea.chunk.css.map",
+  "static/media/Check.svg": "/VUTTR-Front-End/static/media/Check.e9b1037c.svg",
+  "static/media/Close.svg": "/VUTTR-Front-End/static/media/Close.5bf82847.svg",
+  "static/media/Link.svg": "/VUTTR-Front-End/static/media/Link.bcb4cbd2.svg",
+  "static/media/LogoBossabox.svg": "/VUTTR-Front-End/static/media/LogoBossabox.4f3c0eda.svg",
+  "static/media/Vuttr.css": "/VUTTR-Front-End/static/media/lupaBossabox.17eabae7.svg"
 }

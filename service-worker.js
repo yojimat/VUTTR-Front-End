@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/VUTTR-Front-End/precache-manifest.c534ba869d42d032993e709b1e0eb86d.js"
+  "/VUTTR-Front-End/precache-manifest.bd72660b791264c4563b6d20aff2f00e.js"
 );
 
 workbox.clientsClaim();
