@@ -91,7 +91,7 @@ describe(">>>App.js", () => {
 
 		appGetListaTools.instance().getListaTools();
 
-    	expect(global.fetch).toHaveBeenCalledWith("/tools",{"headers": {"Content-Type": "application/json"}, "method": "get"});
+    	expect(global.fetch).toHaveBeenCalledWith("http://localhost:3000/tools",{"headers": {"Content-Type": "application/json"}, "method": "get"});
 		expect(global.fetch).toHaveBeenCalledTimes(1);
 
 		process.nextTick(() => {
@@ -113,7 +113,7 @@ describe(">>>App.js", () => {
 
 		appGetListaToolsGlobal.instance().getListaToolsBuscaGlobal("Notion");
 
-    	expect(global.fetch).toHaveBeenCalledWith("/tools?q=Notion",{"headers": {"Content-Type": "application/json"}, "method": "get"});
+    	expect(global.fetch).toHaveBeenCalledWith("http://localhost:3000/tools?q=Notion",{"headers": {"Content-Type": "application/json"}, "method": "get"});
     	//2 por causa do fetch do componentDidMount.
 		expect(global.fetch).toHaveBeenCalledTimes(2);
 
@@ -136,7 +136,7 @@ describe(">>>App.js", () => {
 
 		appGetListaToolsTag.instance().getListaToolsBuscaTag("organization");
 
-    	expect(global.fetch).toHaveBeenNthCalledWith(2,"/tools?tags_like=organization",{"headers": {"Content-Type": "application/json"}, "method": "get"});
+    	expect(global.fetch).toHaveBeenNthCalledWith(2,"http://localhost:3000/tools?tags_like=organization",{"headers": {"Content-Type": "application/json"}, "method": "get"});
     	//2 por causa do fetch do componentDidMount.
 		expect(global.fetch).toHaveBeenCalledTimes(2);
 
@@ -230,7 +230,7 @@ describe(">>>App.js", () => {
 
     	appDeleteTool.instance().deleteTool();
 
-    	expect(global.fetch).toHaveBeenCalledWith("/tools/1",{"headers": {"Content-Type": "application/json"}, "method": "delete"});
+    	expect(global.fetch).toHaveBeenCalledWith("http://localhost:3000/tools/1",{"headers": {"Content-Type": "application/json"}, "method": "delete"});
 
     	global.fetch.mockClear();
 	});
@@ -249,7 +249,7 @@ describe(">>>App.js", () => {
 
 		appAdicionarTool.instance().adicionarTool();
 
-		expect(global.fetch).toHaveBeenCalledWith("/tools/",{"headers": {"Content-Type": "application/json"}, "method": "post"});
+		expect(global.fetch).toHaveBeenCalledWith("http://localhost:3000/tools/",{"headers": {"Content-Type": "application/json"}, "method": "post"});
 
 		global.fetch.mockClear();
 	});

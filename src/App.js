@@ -32,7 +32,7 @@ class App extends Component {
 	}
 
 	async getListaTools() {
-		const dados =  await fetch("/tools", {
+		const dados =  await fetch("http://localhost:3000/tools", {
 			method: "get",
 			headers: {
 				'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ class App extends Component {
 	async getListaToolsBuscaGlobal(busca) {
 		this.loaderStatusLista();
 
-		const dados =  await fetch(`/tools?q=${busca}`, {
+		const dados =  await fetch(`http://localhost:3000/tools?q=${busca}`, {
 			method: "get",
 			headers: {
 				'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ class App extends Component {
 	async getListaToolsBuscaTag(tag) {
 		this.loaderStatusLista();
 
-		const dados =  await fetch(`/tools?tags_like=${tag}`, {
+		const dados =  await fetch(`http://localhost:3000/tools?tags_like=${tag}`, {
 			method: "get",
 			headers: {
 				'Content-Type': 'application/json'
@@ -142,7 +142,7 @@ class App extends Component {
 
 		this.loaderStatus();
 
-		const deleteStatus = await fetch(`/tools/${toolIdDelete}`,{
+		const deleteStatus = await fetch(`http://localhost:3000/tools/${toolIdDelete}`,{
 			method: "delete",
 			headers: {
 				'Content-Type': 'application/json'
@@ -162,7 +162,7 @@ class App extends Component {
 	adicionarTool = async (form) => {
 		this.loaderStatus();
 
-		const addStatus = await fetch("/tools/",{
+		const addStatus = await fetch("http://localhost:3000/tools/",{
 			method: "post",
 			headers: {
 				'Content-Type': 'application/json'

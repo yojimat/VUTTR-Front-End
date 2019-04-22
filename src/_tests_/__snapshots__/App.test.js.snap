@@ -30,29 +30,31 @@ exports[`>>>App.js +App renderiza normalmente. 1`] = `
       </h2>
     </header>
     <section>
-      <div>
+      <form>
         <input
-          className="ba b--black-20 mb2 "
+          aria-label="Pesquisa"
+          className="mb2 pesquisaInput br1"
           onChange={[Function]}
-          placeholder="Pesquise aqui!"
+          placeholder="Pesquise aqui…"
           type="search"
         />
          
-        <input
-          className="mr2"
-          onChange={[Function]}
-          type="checkbox"
-        />
         <label
-          className="lh-copy-l"
+          className="lh-copy container ml3"
         >
           Procurar com #tags?
+          <input
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checkmark br1"
+          />
         </label>
-         
-      </div>
+      </form>
       <br />
       <button
-        className="dim br3 ph3 pv2 mb2 dib white bg-add"
+        className="grow br2 ph3 pv2 mb2 dib bg-add azul"
         onClick={[Function]}
         type="button"
       >
@@ -60,12 +62,13 @@ exports[`>>>App.js +App renderiza normalmente. 1`] = `
           aria-label="plus"
           role="img"
         >
-          ➕ Adicionar Tool
+          ➕
         </span>
+         Adicionar Tool
       </button>
       <br />
       <article
-        className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+        className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
       >
         <div
           className="pa2"
@@ -125,6 +128,12 @@ exports[`>>>App.js +App renderiza normalmente. 1`] = `
     <small>
       Projeto realizado para desafio do Bossabox.
     </small>
+    <img
+      alt="check"
+      height="46"
+      src="LogoBossabox.svg"
+      width="36"
+    />
   </footer>
 </div>
 `;

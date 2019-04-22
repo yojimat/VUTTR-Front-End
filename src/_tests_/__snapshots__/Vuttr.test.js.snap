@@ -14,6 +14,7 @@ ReactWrapper {
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
+    "getWrappingComponentRenderer": [Function],
     "render": [Function],
     "simulateError": [Function],
     "simulateEvent": [Function],
@@ -51,40 +52,43 @@ ReactWrapper {
           </h2>
         </header>
         <section>
-          <div>
+          <form>
             <input
-              class="ba b--black-20 mb2 "
-              placeholder="Pesquise aqui!"
+              aria-label="Pesquisa"
+              class="mb2 pesquisaInput br1"
+              placeholder="Pesquise aqui…"
               type="search"
               value=""
             />
              
-            <input
-              class="mr2"
-              type="checkbox"
-            />
             <label
-              class="lh-copy-l"
+              class="lh-copy container ml3"
             >
               Procurar com #tags?
+              <input
+                type="checkbox"
+              />
+              <span
+                class="checkmark br1"
+              />
             </label>
-             
-          </div>
+          </form>
           <br />
           <button
-            class="dim br3 ph3 pv2 mb2 dib white bg-add"
+            class="grow br2 ph3 pv2 mb2 dib bg-add azul"
             type="button"
           >
             <span
               aria-label="plus"
               role="img"
             >
-              ➕ Adicionar Tool
+              ➕
             </span>
+             Adicionar Tool
           </button>
           <br />
           <article
-            class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+            class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
           >
             <div
               class="pa2"
@@ -113,29 +117,31 @@ ReactWrapper {
             </h2>
           </header>,
           <section>
-            <div>
+            <form>
               <input
-                className="ba b--black-20 mb2 "
+                aria-label="Pesquisa"
+                className="mb2 pesquisaInput br1"
                 onChange={[Function]}
-                placeholder="Pesquise aqui!"
+                placeholder="Pesquise aqui…"
                 type="search"
               />
                
-              <input
-                className="mr2"
-                onChange={[Function]}
-                type="checkbox"
-              />
               <label
-                className="lh-copy-l"
+                className="lh-copy container ml3"
               >
                 Procurar com #tags?
+                <input
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <span
+                  className="checkmark br1"
+                />
               </label>
-               
-            </div>
+            </form>
             <br />
             <button
-              className="dim br3 ph3 pv2 mb2 dib white bg-add"
+              className="grow br2 ph3 pv2 mb2 dib bg-add azul"
               onClick={[MockFunction]}
               type="button"
             >
@@ -143,12 +149,13 @@ ReactWrapper {
                 aria-label="plus"
                 role="img"
               >
-                ➕ Adicionar Tool
+                ➕
               </span>
+               Adicionar Tool
             </button>
             <br />
             <article
-              className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+              className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
             >
               <div
                 className="pa2"
@@ -236,40 +243,43 @@ ReactWrapper {
         },
         Object {
           "instance": <section>
-            <div>
+            <form>
               <input
-                class="ba b--black-20 mb2 "
-                placeholder="Pesquise aqui!"
+                aria-label="Pesquisa"
+                class="mb2 pesquisaInput br1"
+                placeholder="Pesquise aqui…"
                 type="search"
                 value=""
               />
                
-              <input
-                class="mr2"
-                type="checkbox"
-              />
               <label
-                class="lh-copy-l"
+                class="lh-copy container ml3"
               >
                 Procurar com #tags?
+                <input
+                  type="checkbox"
+                />
+                <span
+                  class="checkmark br1"
+                />
               </label>
-               
-            </div>
+            </form>
             <br />
             <button
-              class="dim br3 ph3 pv2 mb2 dib white bg-add"
+              class="grow br2 ph3 pv2 mb2 dib bg-add azul"
               type="button"
             >
               <span
                 aria-label="plus"
                 role="img"
               >
-                ➕ Adicionar Tool
+                ➕
               </span>
+               Adicionar Tool
             </button>
             <br />
             <article
-              class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+              class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
             >
               <div
                 class="pa2"
@@ -284,29 +294,31 @@ ReactWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div>
+              <form>
                 <input
-                  className="ba b--black-20 mb2 "
+                  aria-label="Pesquisa"
+                  className="mb2 pesquisaInput br1"
                   onChange={[Function]}
-                  placeholder="Pesquise aqui!"
+                  placeholder="Pesquise aqui…"
                   type="search"
                 />
                  
-                <input
-                  className="mr2"
-                  onChange={[Function]}
-                  type="checkbox"
-                />
                 <label
-                  className="lh-copy-l"
+                  className="lh-copy container ml3"
                 >
                   Procurar com #tags?
+                  <input
+                    onChange={[Function]}
+                    type="checkbox"
+                  />
+                  <span
+                    className="checkmark br1"
+                  />
                 </label>
-                 
-              </div>,
+              </form>,
               <br />,
               <button
-                className="dim br3 ph3 pv2 mb2 dib white bg-add"
+                className="grow br2 ph3 pv2 mb2 dib bg-add azul"
                 onClick={[MockFunction]}
                 type="button"
               >
@@ -314,12 +326,13 @@ ReactWrapper {
                   aria-label="plus"
                   role="img"
                 >
-                  ➕ Adicionar Tool
+                  ➕
                 </span>
+                 Adicionar Tool
               </button>,
               <br />,
               <article
-                className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+                className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
               >
                 <div
                   className="pa2"
@@ -334,64 +347,70 @@ ReactWrapper {
           "ref": null,
           "rendered": Array [
             Object {
-              "instance": <div>
+              "instance": <form>
                 <input
-                  class="ba b--black-20 mb2 "
-                  placeholder="Pesquise aqui!"
+                  aria-label="Pesquisa"
+                  class="mb2 pesquisaInput br1"
+                  placeholder="Pesquise aqui…"
                   type="search"
                   value=""
                 />
                  
-                <input
-                  class="mr2"
-                  type="checkbox"
-                />
                 <label
-                  class="lh-copy-l"
+                  class="lh-copy container ml3"
                 >
                   Procurar com #tags?
+                  <input
+                    type="checkbox"
+                  />
+                  <span
+                    class="checkmark br1"
+                  />
                 </label>
-                 
-              </div>,
+              </form>,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
                   <input
-                    className="ba b--black-20 mb2 "
+                    aria-label="Pesquisa"
+                    className="mb2 pesquisaInput br1"
                     onChange={[Function]}
-                    placeholder="Pesquise aqui!"
+                    placeholder="Pesquise aqui…"
                     type="search"
                   />,
                   " ",
-                  <input
-                    className="mr2"
-                    onChange={[Function]}
-                    type="checkbox"
-                  />,
                   <label
-                    className="lh-copy-l"
+                    className="lh-copy container ml3"
                   >
                     Procurar com #tags?
+                    <input
+                      onChange={[Function]}
+                      type="checkbox"
+                    />
+                    <span
+                      className="checkmark br1"
+                    />
                   </label>,
-                  " ",
                 ],
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": <input
-                    class="ba b--black-20 mb2 "
-                    placeholder="Pesquise aqui!"
+                    aria-label="Pesquisa"
+                    class="mb2 pesquisaInput br1"
+                    placeholder="Pesquise aqui…"
                     type="search"
                     value=""
                   />,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "ba b--black-20 mb2 ",
+                    "aria-label": "Pesquisa",
+                    "className": "mb2 pesquisaInput br1",
                     "onChange": [Function],
-                    "placeholder": "Pesquise aqui!",
+                    "placeholder": "Pesquise aqui…",
                     "type": "search",
                     "value": undefined,
                   },
@@ -403,44 +422,71 @@ ReactWrapper {
                 },
                 " ",
                 Object {
-                  "instance": <input
-                    class="mr2"
-                    type="checkbox"
-                  />,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "className": "mr2",
-                    "onChange": [Function],
-                    "type": "checkbox",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    undefined,
-                  ],
-                  "type": "input",
-                },
-                Object {
                   "instance": <label
-                    class="lh-copy-l"
+                    class="lh-copy container ml3"
                   >
                     Procurar com #tags?
+                    <input
+                      type="checkbox"
+                    />
+                    <span
+                      class="checkmark br1"
+                    />
                   </label>,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Procurar com #tags?",
-                    "className": "lh-copy-l",
+                    "children": Array [
+                      "Procurar com #tags?",
+                      <input
+                        onChange={[Function]}
+                        type="checkbox"
+                      />,
+                      <span
+                        className="checkmark br1"
+                      />,
+                    ],
+                    "className": "lh-copy container ml3",
                   },
                   "ref": null,
                   "rendered": Array [
                     "Procurar com #tags?",
+                    Object {
+                      "instance": <input
+                        type="checkbox"
+                      />,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "onChange": [Function],
+                        "type": "checkbox",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        undefined,
+                      ],
+                      "type": "input",
+                    },
+                    Object {
+                      "instance": <span
+                        class="checkmark br1"
+                      />,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "checkmark br1",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        undefined,
+                      ],
+                      "type": "span",
+                    },
                   ],
                   "type": "label",
                 },
-                " ",
               ],
-              "type": "div",
+              "type": "form",
             },
             Object {
               "instance": <br />,
@@ -455,26 +501,30 @@ ReactWrapper {
             },
             Object {
               "instance": <button
-                class="dim br3 ph3 pv2 mb2 dib white bg-add"
+                class="grow br2 ph3 pv2 mb2 dib bg-add azul"
                 type="button"
               >
                 <span
                   aria-label="plus"
                   role="img"
                 >
-                  ➕ Adicionar Tool
+                  ➕
                 </span>
+                 Adicionar Tool
               </button>,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <span
-                  aria-label="plus"
-                  role="img"
-                >
-                  ➕ Adicionar Tool
-                </span>,
-                "className": "dim br3 ph3 pv2 mb2 dib white bg-add",
+                "children": Array [
+                  <span
+                    aria-label="plus"
+                    role="img"
+                  >
+                    ➕
+                  </span>,
+                  " Adicionar Tool",
+                ],
+                "className": "grow br2 ph3 pv2 mb2 dib bg-add azul",
                 "onClick": [MockFunction],
                 "type": "button",
               },
@@ -485,21 +535,22 @@ ReactWrapper {
                     aria-label="plus"
                     role="img"
                   >
-                    ➕ Adicionar Tool
+                    ➕
                   </span>,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "aria-label": "plus",
-                    "children": "➕ Adicionar Tool",
+                    "children": "➕",
                     "role": "img",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "➕ Adicionar Tool",
+                    "➕",
                   ],
                   "type": "span",
                 },
+                " Adicionar Tool",
               ],
               "type": "button",
             },
@@ -516,7 +567,7 @@ ReactWrapper {
             },
             Object {
               "instance": <article
-                class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+                class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
               >
                 <div
                   class="pa2"
@@ -536,7 +587,7 @@ ReactWrapper {
                     Lista vazia.
                   </span>
                 </div>,
-                "className": "bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4",
+                "className": "bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox",
               },
               "ref": null,
               "rendered": Array [
@@ -622,40 +673,43 @@ ReactWrapper {
             </h2>
           </header>
           <section>
-            <div>
+            <form>
               <input
-                class="ba b--black-20 mb2 "
-                placeholder="Pesquise aqui!"
+                aria-label="Pesquisa"
+                class="mb2 pesquisaInput br1"
+                placeholder="Pesquise aqui…"
                 type="search"
                 value=""
               />
                
-              <input
-                class="mr2"
-                type="checkbox"
-              />
               <label
-                class="lh-copy-l"
+                class="lh-copy container ml3"
               >
                 Procurar com #tags?
+                <input
+                  type="checkbox"
+                />
+                <span
+                  class="checkmark br1"
+                />
               </label>
-               
-            </div>
+            </form>
             <br />
             <button
-              class="dim br3 ph3 pv2 mb2 dib white bg-add"
+              class="grow br2 ph3 pv2 mb2 dib bg-add azul"
               type="button"
             >
               <span
                 aria-label="plus"
                 role="img"
               >
-                ➕ Adicionar Tool
+                ➕
               </span>
+               Adicionar Tool
             </button>
             <br />
             <article
-              class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+              class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
             >
               <div
                 class="pa2"
@@ -684,29 +738,31 @@ ReactWrapper {
               </h2>
             </header>,
             <section>
-              <div>
+              <form>
                 <input
-                  className="ba b--black-20 mb2 "
+                  aria-label="Pesquisa"
+                  className="mb2 pesquisaInput br1"
                   onChange={[Function]}
-                  placeholder="Pesquise aqui!"
+                  placeholder="Pesquise aqui…"
                   type="search"
                 />
                  
-                <input
-                  className="mr2"
-                  onChange={[Function]}
-                  type="checkbox"
-                />
                 <label
-                  className="lh-copy-l"
+                  className="lh-copy container ml3"
                 >
                   Procurar com #tags?
+                  <input
+                    onChange={[Function]}
+                    type="checkbox"
+                  />
+                  <span
+                    className="checkmark br1"
+                  />
                 </label>
-                 
-              </div>
+              </form>
               <br />
               <button
-                className="dim br3 ph3 pv2 mb2 dib white bg-add"
+                className="grow br2 ph3 pv2 mb2 dib bg-add azul"
                 onClick={[MockFunction]}
                 type="button"
               >
@@ -714,12 +770,13 @@ ReactWrapper {
                   aria-label="plus"
                   role="img"
                 >
-                  ➕ Adicionar Tool
+                  ➕
                 </span>
+                 Adicionar Tool
               </button>
               <br />
               <article
-                className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+                className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
               >
                 <div
                   className="pa2"
@@ -807,40 +864,43 @@ ReactWrapper {
           },
           Object {
             "instance": <section>
-              <div>
+              <form>
                 <input
-                  class="ba b--black-20 mb2 "
-                  placeholder="Pesquise aqui!"
+                  aria-label="Pesquisa"
+                  class="mb2 pesquisaInput br1"
+                  placeholder="Pesquise aqui…"
                   type="search"
                   value=""
                 />
                  
-                <input
-                  class="mr2"
-                  type="checkbox"
-                />
                 <label
-                  class="lh-copy-l"
+                  class="lh-copy container ml3"
                 >
                   Procurar com #tags?
+                  <input
+                    type="checkbox"
+                  />
+                  <span
+                    class="checkmark br1"
+                  />
                 </label>
-                 
-              </div>
+              </form>
               <br />
               <button
-                class="dim br3 ph3 pv2 mb2 dib white bg-add"
+                class="grow br2 ph3 pv2 mb2 dib bg-add azul"
                 type="button"
               >
                 <span
                   aria-label="plus"
                   role="img"
                 >
-                  ➕ Adicionar Tool
+                  ➕
                 </span>
+                 Adicionar Tool
               </button>
               <br />
               <article
-                class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+                class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
               >
                 <div
                   class="pa2"
@@ -855,29 +915,31 @@ ReactWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <div>
+                <form>
                   <input
-                    className="ba b--black-20 mb2 "
+                    aria-label="Pesquisa"
+                    className="mb2 pesquisaInput br1"
                     onChange={[Function]}
-                    placeholder="Pesquise aqui!"
+                    placeholder="Pesquise aqui…"
                     type="search"
                   />
                    
-                  <input
-                    className="mr2"
-                    onChange={[Function]}
-                    type="checkbox"
-                  />
                   <label
-                    className="lh-copy-l"
+                    className="lh-copy container ml3"
                   >
                     Procurar com #tags?
+                    <input
+                      onChange={[Function]}
+                      type="checkbox"
+                    />
+                    <span
+                      className="checkmark br1"
+                    />
                   </label>
-                   
-                </div>,
+                </form>,
                 <br />,
                 <button
-                  className="dim br3 ph3 pv2 mb2 dib white bg-add"
+                  className="grow br2 ph3 pv2 mb2 dib bg-add azul"
                   onClick={[MockFunction]}
                   type="button"
                 >
@@ -885,12 +947,13 @@ ReactWrapper {
                     aria-label="plus"
                     role="img"
                   >
-                    ➕ Adicionar Tool
+                    ➕
                   </span>
+                   Adicionar Tool
                 </button>,
                 <br />,
                 <article
-                  className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+                  className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
                 >
                   <div
                     className="pa2"
@@ -905,64 +968,70 @@ ReactWrapper {
             "ref": null,
             "rendered": Array [
               Object {
-                "instance": <div>
+                "instance": <form>
                   <input
-                    class="ba b--black-20 mb2 "
-                    placeholder="Pesquise aqui!"
+                    aria-label="Pesquisa"
+                    class="mb2 pesquisaInput br1"
+                    placeholder="Pesquise aqui…"
                     type="search"
                     value=""
                   />
                    
-                  <input
-                    class="mr2"
-                    type="checkbox"
-                  />
                   <label
-                    class="lh-copy-l"
+                    class="lh-copy container ml3"
                   >
                     Procurar com #tags?
+                    <input
+                      type="checkbox"
+                    />
+                    <span
+                      class="checkmark br1"
+                    />
                   </label>
-                   
-                </div>,
+                </form>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     <input
-                      className="ba b--black-20 mb2 "
+                      aria-label="Pesquisa"
+                      className="mb2 pesquisaInput br1"
                       onChange={[Function]}
-                      placeholder="Pesquise aqui!"
+                      placeholder="Pesquise aqui…"
                       type="search"
                     />,
                     " ",
-                    <input
-                      className="mr2"
-                      onChange={[Function]}
-                      type="checkbox"
-                    />,
                     <label
-                      className="lh-copy-l"
+                      className="lh-copy container ml3"
                     >
                       Procurar com #tags?
+                      <input
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                      <span
+                        className="checkmark br1"
+                      />
                     </label>,
-                    " ",
                   ],
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": <input
-                      class="ba b--black-20 mb2 "
-                      placeholder="Pesquise aqui!"
+                      aria-label="Pesquisa"
+                      class="mb2 pesquisaInput br1"
+                      placeholder="Pesquise aqui…"
                       type="search"
                       value=""
                     />,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "className": "ba b--black-20 mb2 ",
+                      "aria-label": "Pesquisa",
+                      "className": "mb2 pesquisaInput br1",
                       "onChange": [Function],
-                      "placeholder": "Pesquise aqui!",
+                      "placeholder": "Pesquise aqui…",
                       "type": "search",
                       "value": undefined,
                     },
@@ -974,44 +1043,71 @@ ReactWrapper {
                   },
                   " ",
                   Object {
-                    "instance": <input
-                      class="mr2"
-                      type="checkbox"
-                    />,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "mr2",
-                      "onChange": [Function],
-                      "type": "checkbox",
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      undefined,
-                    ],
-                    "type": "input",
-                  },
-                  Object {
                     "instance": <label
-                      class="lh-copy-l"
+                      class="lh-copy container ml3"
                     >
                       Procurar com #tags?
+                      <input
+                        type="checkbox"
+                      />
+                      <span
+                        class="checkmark br1"
+                      />
                     </label>,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Procurar com #tags?",
-                      "className": "lh-copy-l",
+                      "children": Array [
+                        "Procurar com #tags?",
+                        <input
+                          onChange={[Function]}
+                          type="checkbox"
+                        />,
+                        <span
+                          className="checkmark br1"
+                        />,
+                      ],
+                      "className": "lh-copy container ml3",
                     },
                     "ref": null,
                     "rendered": Array [
                       "Procurar com #tags?",
+                      Object {
+                        "instance": <input
+                          type="checkbox"
+                        />,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "onChange": [Function],
+                          "type": "checkbox",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          undefined,
+                        ],
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": <span
+                          class="checkmark br1"
+                        />,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "checkmark br1",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          undefined,
+                        ],
+                        "type": "span",
+                      },
                     ],
                     "type": "label",
                   },
-                  " ",
                 ],
-                "type": "div",
+                "type": "form",
               },
               Object {
                 "instance": <br />,
@@ -1026,26 +1122,30 @@ ReactWrapper {
               },
               Object {
                 "instance": <button
-                  class="dim br3 ph3 pv2 mb2 dib white bg-add"
+                  class="grow br2 ph3 pv2 mb2 dib bg-add azul"
                   type="button"
                 >
                   <span
                     aria-label="plus"
                     role="img"
                   >
-                    ➕ Adicionar Tool
+                    ➕
                   </span>
+                   Adicionar Tool
                 </button>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <span
-                    aria-label="plus"
-                    role="img"
-                  >
-                    ➕ Adicionar Tool
-                  </span>,
-                  "className": "dim br3 ph3 pv2 mb2 dib white bg-add",
+                  "children": Array [
+                    <span
+                      aria-label="plus"
+                      role="img"
+                    >
+                      ➕
+                    </span>,
+                    " Adicionar Tool",
+                  ],
+                  "className": "grow br2 ph3 pv2 mb2 dib bg-add azul",
                   "onClick": [MockFunction],
                   "type": "button",
                 },
@@ -1056,21 +1156,22 @@ ReactWrapper {
                       aria-label="plus"
                       role="img"
                     >
-                      ➕ Adicionar Tool
+                      ➕
                     </span>,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "aria-label": "plus",
-                      "children": "➕ Adicionar Tool",
+                      "children": "➕",
                       "role": "img",
                     },
                     "ref": null,
                     "rendered": Array [
-                      "➕ Adicionar Tool",
+                      "➕",
                     ],
                     "type": "span",
                   },
+                  " Adicionar Tool",
                 ],
                 "type": "button",
               },
@@ -1087,7 +1188,7 @@ ReactWrapper {
               },
               Object {
                 "instance": <article
-                  class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4"
+                  class="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
                 >
                   <div
                     class="pa2"
@@ -1107,7 +1208,7 @@ ReactWrapper {
                       Lista vazia.
                     </span>
                   </div>,
-                  "className": "bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br4-l pr4",
+                  "className": "bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1174,7 +1275,10 @@ ReactWrapper {
           "getChildContext": Object {
             "calledByRenderer": false,
           },
-          "getDerivedStateFromProps": true,
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
           "getSnapshotBeforeUpdate": true,
           "setState": Object {
             "skipsComponentDidUpdateOnNullish": true,

@@ -10,7 +10,7 @@
     "react-scripts": "^2.1.8"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3001 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -26,13 +26,11 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "http://localhost:3000",
   "devDependencies": {
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "gh-pages": "^2.0.1",
     "react-test-renderer": "^16.8.6",
     "tachyons": "^4.11.1"
-  },
-  "homepage": "https://yojimat.github.io/VUTTR-Front-End/"
+  }
 }

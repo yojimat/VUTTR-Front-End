@@ -1,6 +1,19 @@
 {
   "tools": [
     {
+      "id": 1,
+      "title": "Notion",
+      "link": "https://notion.so",
+      "description": "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized. ",
+      "tags": [
+        "organization",
+        "planning",
+        "collaboration",
+        "writing",
+        "calendar"
+      ]
+    },
+    {
       "id": 2,
       "title": "json-server",
       "link": "https://github.com/typicode/json-server",
@@ -29,23 +42,15 @@
       ]
     },
     {
-      "title": "GitHub ",
-      "link": "https://github.addacom/yojimat",
-      "description": "testando",
+      "title": "Github",
+      "link": "https://github.com/yojimat",
+      "description": "Sistema para guardar repositórios git.",
       "tags": [
-        "TAg",
-        "Tag"
+        "git",
+        "dev",
+        "ágil "
       ],
-      "id": 6
-    },
-    {
-      "title": "FDFDFD",
-      "link": "sdasda",
-      "description": "asdsada",
-      "tags": [
-        "asdaa"
-      ],
-      "id": 7
+      "id": 4
     }
   ]
 }

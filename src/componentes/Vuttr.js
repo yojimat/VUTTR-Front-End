@@ -11,13 +11,15 @@ const mapListView = (lista, abrirModalDelete) => {
 
     return(
       <li key={i}>
-        <h3>
+        <h3 className="azul linkTitle">
           <a href={item.link} 
             target="blank"
             className="azul link"
           >
-            <img src={Link} alt="check" height="22" width="52"/> {item.title}
+            <img src={Link} alt="check" height="22" width="52"/> 
           </a>
+          {' '}
+          {item.title}
         </h3>
         <p>{item.description}</p>
         <p>{tagsList}</p>
@@ -27,7 +29,7 @@ const mapListView = (lista, abrirModalDelete) => {
           id={item.id}
           className="grow br2 ba ph3 pv2 mb2 dib bg-remove vermelho"
         >
-          <span role="img" aria-label="plus">&#x2718; Remover</span>
+          <span role="img" aria-label="plus">&#x2718;</span> Remover
         </button>
         <hr className="o-30"/>
       </li>
@@ -52,7 +54,7 @@ const Vuttr = React.forwardRef(({...props }, ref) => {
         <h2 className="ink mt2 mb4 ttu tracked">Very Useful Tools to Remember</h2>
       </header>
       <section>
-        <div>
+        <form>
           <input 
             type="search" 
             placeholder="Pesquise aqui…"
@@ -60,24 +62,23 @@ const Vuttr = React.forwardRef(({...props }, ref) => {
             value={ref.value}
             onChange={() => pesquisaFiltradasTools(ref.value)}
             className="mb2 pesquisaInput br1"
+            aria-label="Pesquisa"
           />
           {' '}
-          <input 
+          <label className="lh-copy container ml3">Procurar com #tags?
+            <input 
             type="checkbox"
             onChange={() => toggleTagFiltro(ref.value)}
-            className="mr2"
-          />
-          <label className="lh-copy-l">
-            Procurar com #tags?
+            />
+            <span className="checkmark br1"></span>
           </label>
-          {' '}
-        </div>
+        </form>
         <br />
         <button className="grow br2 ph3 pv2 mb2 dib bg-add azul" 
           type="button" 
           onClick={ abrirModal }
         >
-          <span role="img" aria-label="plus">➕ Adicionar Tool</span> 
+          <span role="img" aria-label="plus">➕</span> Adicionar Tool
         </button>
         <br />
         <article className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox">

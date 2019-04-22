@@ -12,18 +12,30 @@ exports[`>>>RemoveTool.js +RemoveTool renderiza normalmente. 1`] = `
      da lista?
   </p>
   <button
-    className="dim br3 ph3 pv2 mb2 dib black mr4 bg-amarelo"
+    className="br2 ph3 pv2 mb2 dib white mr4 bg-amarelo"
     type="button"
   >
     <span>
+      <img
+        alt="check"
+        height="20"
+        src="Close.svg"
+        width="20"
+      />
       Cancelar
     </span>
   </button>
   <button
-    className="dim br3 ph3 pv2 mb2 dib black bg-vermelho"
+    className="br2 ph3 pv2 mb2 dib white bg-vermelho"
     type="submit"
   >
     <span>
+      <img
+        alt="check"
+        height="20"
+        src="Check.svg"
+        width="20"
+      />
       Sim, deletar.
     </span>
   </button>

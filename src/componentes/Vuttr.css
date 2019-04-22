@@ -3,6 +3,10 @@ ul {
 	list-style-type: none;
 }
 
+a {
+	display: none;
+}
+
 .App { text-align: center; }
 
 @media (max-width: 600px) 
@@ -17,4 +21,69 @@ ul {
 	background-color: #F5F4F6;
 	padding-left: 30px;
 	border: 1px solid #EBEAED;
+}
+
+.linkTitle:hover .link {
+	display: inline;
+}
+
+.container {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	height: 20px;
+  	width: 20px;
+  	background-color: #F5F4F6;
+  	border: 1px solid #DEDCE1;
+}
+
+.container:hover input ~ .checkmark {
+  	background-color: #DEDCE1;
+}
+
+.container input:checked ~ .checkmark {
+  	border: 1px solid #365DF0;
+	background-color: #365DF0;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
