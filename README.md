@@ -22,3 +22,4 @@ Para conseguir o artefato do projeto execute:
    ```
 npm install && npm run build
 ```
+Depois use o Docker para gerar a imagem do projeto.

@@ -1,6 +1,7 @@
 import React, { Component, Suspense, lazy } from "react";
 import Vuttr from "./componentes/Vuttr";
 import ModalVuttr from "./componentes/ModalVuttr";
+import ErrorBoundary from "./componentes/ErrorBoundary";
 import Particles from "react-particles-js";
 import particlesOptions from "./helpers/ParticlesOptions";
 import SocialSVG from "./helpers/LinkedinSVG";
@@ -33,6 +34,8 @@ class App extends Component {
 	}
 
 	async getListaTools() {
+		this.loaderStatusLista();
+
 		const dados =  await fetch("http://localhost:3000/tools", {
 			method: "get",
 			headers: {
@@ -47,7 +50,10 @@ class App extends Component {
 
 		if (dados !== undefined) {
 			this.setState({ toolsList: dados });
-		}
+			this.loaderStatusLista("mensagemRecebida");
+		} else {
+			this.loaderStatusLista("Falha ao carregar a lista, tente recarregar a página.");
+		}	
 	}
 
 	async getListaToolsBuscaGlobal(busca) {
@@ -232,27 +238,31 @@ class App extends Component {
 				/>
 				{modalAdicionarAberta &&
 					<ModalVuttr fecharModal={() =>this.toggleModal()}>
-						<Suspense fallback={<div className="loader" ></div>}>
-							<AddTool 
-								fecharModal={() =>this.toggleModal()}
-								adicionarTool={ this.adicionarTool }
-								isLoading={ isLoading }
-								respostaFetchUsuario={ respostaFetchUsuario }
-							/>
-						</Suspense>
+						<ErrorBoundary>
+							<Suspense fallback={<div className="loader" ></div>}>
+								<AddTool 
+									fecharModal={() =>this.toggleModal()}
+									adicionarTool={ this.adicionarTool }
+									isLoading={ isLoading }
+									respostaFetchUsuario={ respostaFetchUsuario }
+								/>
+							</Suspense>
+						</ErrorBoundary>
 					</ModalVuttr>
 				}
 				{modalDeleteAberta &&
 					<ModalVuttr fecharModal={() =>this.toggleModalDelete()}>
-						<Suspense fallback={<div className="loader" ></div>}>
-							<RemoveTool 
-								fecharModal={() =>this.toggleModalDelete()}
-								deleteTool={() =>this.deleteTool()}
-								nomeTool={ nomeTool }
-								isLoading={ isLoading }
-								respostaFetchUsuario={ respostaFetchUsuario }
-							/>
-						</Suspense>
+						<ErrorBoundary>
+							<Suspense fallback={<div className="loader" ></div>}>
+								<RemoveTool 
+									fecharModal={() =>this.toggleModalDelete()}
+									deleteTool={() =>this.deleteTool()}
+									nomeTool={ nomeTool }
+									isLoading={ isLoading }
+									respostaFetchUsuario={ respostaFetchUsuario }
+								/>
+							</Suspense>
+						</ErrorBoundary>
 					</ModalVuttr>
 				}
 				<footer className="pb4 ph3 ph5-ns tc">

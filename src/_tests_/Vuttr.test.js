@@ -6,7 +6,6 @@ import { mount } from 'enzyme';
 const abrirModal = jest.fn(),
 	abrirModalDelete = jest.fn(),
 	pesquisaFiltradasTools = jest.fn(),
-	onChangePesquisa = jest.fn(),
 	toggleTagFiltro = jest.fn(),
 	defaultProps = {
 		abrirModal,

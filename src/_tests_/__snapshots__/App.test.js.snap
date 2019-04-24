@@ -73,12 +73,8 @@ exports[`>>>App.js +App renderiza normalmente. 1`] = `
         className="bg-branco-escuro w-50 center mb4 o-90 ba b--black-20 br2 pr4 shadowBox"
       >
         <div
-          className="pa2"
-        >
-          <span>
-            Lista vazia.
-          </span>
-        </div>
+          className="loader"
+        />
       </article>
     </section>
   </div>
