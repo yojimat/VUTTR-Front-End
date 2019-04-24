@@ -31,44 +31,6 @@ describe(">>>App.js", () => {
   		expect(appContainer).toMatchSnapshot();
 	});
 
-	it("+Verificando evento ToggleModalAdd", () =>{
-		const appToggle = mount(<App />);
-
-		expect.assertions(3);
-		expect(appToggle.state("modalAdicionarAberta")).toBe(false);
-		appToggle.find("button").simulate('click');
-		expect(appToggle.state("modalAdicionarAberta")).toBe(true);
-		expect(appToggle.find(".addTool")).toHaveLength(1);
-	});
-
-	it("+Verificando evento ToggleModalRemove", () =>{
-		const appToggleRemove = mount(<App />);
-
-		expect.assertions(6);
-		expect(appToggleRemove.state("toolsList")).toEqual([]);
-		expect(appToggleRemove.state("modalDeleteAberta")).toBe(false);
-		appToggleRemove.setState({ 
-			toolsList: [{
-				"id": 1,
-      			"title": "Notion",
-		        "link": "https://notion.so",
-		        "description": "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized. ",
-		        "tags": [
-		        "organization",
-		        "planning",
-		        "collaboration",
-		        "writing",
-		        "calendar"
-		        ]
-			}]
-		});
-		expect(appToggleRemove.state("toolsList")).not.toEqual([]);
-		expect(appToggleRemove.find("button[id=1]")).toHaveLength(1);
-		appToggleRemove.find("button[id=1]").simulate('click');
-		expect(appToggleRemove.state("modalDeleteAberta")).toBe(true);
-		expect(appToggleRemove.find(".removeTool")).toHaveLength(1);
-	});
-
 	it("+Verificando se compenentDidMount chama getListaTools",() => {
 		const spy = jest.spyOn(App.prototype, 'getListaTools'),
 			appGetLista = mount(<App />);
@@ -186,39 +148,6 @@ describe(">>>App.js", () => {
 		expect(appToggleTagFiltro.state("tagFiltro")).toBe(true);
 		expect(spyPesquisaFiltradasTools).toHaveBeenCalled();
 		expect(spyPesquisaFiltradasTools).toHaveBeenCalledTimes(1);
-	});
-
-	it("+Verificando método toggleModal.", () => {
-		const appToggleModal = mount(<App />);
-
-		expect(appToggleModal.state("modalAdicionarAberta")).toBe(false);
-
-		appToggleModal.instance().toggleModal();
-
-		expect(appToggleModal.state("modalAdicionarAberta")).toBe(true);
-	});
-
-	it("+Verificando método toggleModalDelete.", () => {
-		const toggleModalDelete = mount(<App />),
-			item = {
-				id: 1,
-				title: "Jest"
-			};
-
-		expect(toggleModalDelete.state("modalDeleteAberta")).toBe(false);
-		expect(toggleModalDelete.state("toolIdDelete")).toBe(null);
-		expect(toggleModalDelete.state("nomeTool")).toBe("");
-
-		toggleModalDelete.instance().toggleModalDelete(item);
-
-		expect(toggleModalDelete.state("modalDeleteAberta")).toBe(true);
-		expect(toggleModalDelete.state("toolIdDelete")).toBe(1);
-		expect(toggleModalDelete.state("nomeTool")).toBe("Jest");
-
-		toggleModalDelete.instance().toggleModalDelete(item);
-
-		expect(toggleModalDelete.state("toolIdDelete")).toBe(null);
-		expect(toggleModalDelete.state("nomeTool")).toBe("");
 	});
 
 	it("+Verificando método deleteTool.", () => {

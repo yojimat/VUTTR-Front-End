@@ -1,13 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, Suspense, lazy } from "react";
 import Vuttr from "./componentes/Vuttr";
 import ModalVuttr from "./componentes/ModalVuttr";
-import AddTool from "./componentes/AddTool";
-import RemoveTool from "./componentes/RemoveTool";
 import Particles from "react-particles-js";
 import particlesOptions from "./helpers/ParticlesOptions";
 import SocialSVG from "./helpers/LinkedinSVG";
 import LogoBossabox from "./helpers/icones/LogoBossabox.svg";
 import './App.css';
+
+const AddTool = lazy(() => import('./componentes/AddTool'));
+const RemoveTool = lazy(() => import('./componentes/RemoveTool'));
 
 class App extends Component {
 	constructor() {
@@ -23,7 +24,7 @@ class App extends Component {
     		isLoading: false,
     		respostaFetchUsuario: "",
     		respostaLista: "",
-    		isLoadingLista: false
+    		isLoadingLista: false,
   		};
 	}
 
@@ -98,6 +99,7 @@ class App extends Component {
 	//ArrowFunction como método para receber valorPesquisa, evitando erro de propagação.
 	pesquisaFiltradasTools = (valorPesquisa) => {
 		const { tagFiltro } = this.state;
+
 		if (tagFiltro) {
 			this.getListaToolsBuscaTag(valorPesquisa);
 		} else {
@@ -106,6 +108,8 @@ class App extends Component {
 	}
 
 	toggleTagFiltro = (refValue) => {
+		if(refValue === "") { return; }
+		
 		this.setState({ tagFiltro: !this.state.tagFiltro }, () =>{
 			this.pesquisaFiltradasTools(refValue);
 		});
@@ -228,23 +232,29 @@ class App extends Component {
 				/>
 				{modalAdicionarAberta &&
 					<ModalVuttr fecharModal={() =>this.toggleModal()}>
-						<AddTool 
-							fecharModal={() =>this.toggleModal()}
-							adicionarTool={ this.adicionarTool }
-							isLoading={ isLoading }
-							respostaFetchUsuario={ respostaFetchUsuario }
-						/>
-					</ModalVuttr>}
+						<Suspense fallback={<div className="loader" ></div>}>
+							<AddTool 
+								fecharModal={() =>this.toggleModal()}
+								adicionarTool={ this.adicionarTool }
+								isLoading={ isLoading }
+								respostaFetchUsuario={ respostaFetchUsuario }
+							/>
+						</Suspense>
+					</ModalVuttr>
+				}
 				{modalDeleteAberta &&
 					<ModalVuttr fecharModal={() =>this.toggleModalDelete()}>
-						<RemoveTool 
-							fecharModal={() =>this.toggleModalDelete()}
-							deleteTool={() =>this.deleteTool()}
-							nomeTool={ nomeTool }
-							isLoading={ isLoading }
-							respostaFetchUsuario={ respostaFetchUsuario }
-						/>
-					</ModalVuttr>}
+						<Suspense fallback={<div className="loader" ></div>}>
+							<RemoveTool 
+								fecharModal={() =>this.toggleModalDelete()}
+								deleteTool={() =>this.deleteTool()}
+								nomeTool={ nomeTool }
+								isLoading={ isLoading }
+								respostaFetchUsuario={ respostaFetchUsuario }
+							/>
+						</Suspense>
+					</ModalVuttr>
+				}
 				<footer className="pb4 ph3 ph5-ns tc">
 					<a className="link near-black hover-silver dib h2 w2 mr3" href="https://github.com/yojimat" title="GitHub" target="blank">
     					<SocialSVG nomeSocial="GitHub"/>

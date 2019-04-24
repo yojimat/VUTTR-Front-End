@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LoadingComponent from "./LoadingComponent";
 import Link from "../helpers/icones/Link.svg";
 import './Vuttr.css';
@@ -45,7 +45,20 @@ const Vuttr = React.forwardRef(({...props }, ref) => {
     toggleTagFiltro,
     isLoadingLista,
     respostaLista
-  } = props;
+  } = props,
+    [timer, setTimer] = useState(0);
+
+  const submitPesquisa = (e,valorPesquisa) => {
+    e.preventDefault();
+    pesquisaFiltradasTools(valorPesquisa);
+    return false;
+  };
+
+  const onChangePesquisa = (valor) => {
+    if(timer !== 0) { clearTimeout(timer) }
+
+    setTimer(setTimeout(pesquisaFiltradasTools, 1000, valor));
+  };
 
   return(
     <div className="App">
@@ -54,13 +67,13 @@ const Vuttr = React.forwardRef(({...props }, ref) => {
         <h2 className="ink mt2 mb4 ttu tracked">Very Useful Tools to Remember</h2>
       </header>
       <section>
-        <form>
+        <form onSubmit={node => submitPesquisa(node, ref.value)}>
           <input 
             type="search" 
-            placeholder="Pesquise aqui…"
+            placeholder="Pesquise aqui"
             ref={node => ref = node}
             value={ref.value}
-            onChange={() => pesquisaFiltradasTools(ref.value)}
+            onChange={() => onChangePesquisa(ref.value)}
             className="mb2 pesquisaInput br1"
             aria-label="Pesquisa"
           />

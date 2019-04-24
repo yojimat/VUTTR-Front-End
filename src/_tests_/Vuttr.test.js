@@ -6,6 +6,7 @@ import { mount } from 'enzyme';
 const abrirModal = jest.fn(),
 	abrirModalDelete = jest.fn(),
 	pesquisaFiltradasTools = jest.fn(),
+	onChangePesquisa = jest.fn(),
 	toggleTagFiltro = jest.fn(),
 	defaultProps = {
 		abrirModal,
@@ -98,15 +99,6 @@ describe(">>>Vuttr.js", () => {
 		expect(VuttrEventAdd).toHaveLength(1);
 		VuttrEventAdd.simulate('click', abrirModal);
 		expect(abrirModal).toHaveBeenCalled();
-		expect.assertions(2);
-	});
-
-	it("+Verificando evento pesquisaFiltradasTools", () => {
-		const VuttrEventPesquisaFiltrada = VuttrCriadorComponents().find("input[type='search']");
-
-		expect(VuttrEventPesquisaFiltrada).toHaveLength(1);
-		VuttrEventPesquisaFiltrada.simulate("change", pesquisaFiltradasTools);
-		expect(pesquisaFiltradasTools).toHaveBeenCalled();
 		expect.assertions(2);
 	});
 

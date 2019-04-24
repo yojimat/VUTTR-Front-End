@@ -30,12 +30,14 @@ exports[`>>>App.js +App renderiza normalmente. 1`] = `
       </h2>
     </header>
     <section>
-      <form>
+      <form
+        onSubmit={[Function]}
+      >
         <input
           aria-label="Pesquisa"
           className="mb2 pesquisaInput br1"
           onChange={[Function]}
-          placeholder="Pesquise aqui…"
+          placeholder="Pesquise aqui"
           type="search"
         />
          

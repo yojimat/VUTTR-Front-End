@@ -14,7 +14,8 @@ cd challenge-fake-api && npm start
    ```
 npm install && npm start
 ```
-Primeiro temos que inicializar Json-Server, que é a API que guardar e modifica as tools a partir de chamadas REST, e depois o Sistema VUTTR que é onde fica o website. 
+Primeiro temos que inicializar Json-Server, que é a API que guardar e modifica as tools a partir de chamadas REST, e depois o Sistema VUTTR que é onde fica o website, que terá uma interface onde o usuário podera intergir com API.
+
 **Nota:** O comando `npm install`, só precisa ser utilizado na primeira vez em que for abrir o VUTTR. 
 ##  Deploy
 Para conseguir o artefato do projeto execute:

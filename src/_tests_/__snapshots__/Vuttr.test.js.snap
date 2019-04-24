@@ -56,7 +56,7 @@ ReactWrapper {
             <input
               aria-label="Pesquisa"
               class="mb2 pesquisaInput br1"
-              placeholder="Pesquise aqui…"
+              placeholder="Pesquise aqui"
               type="search"
               value=""
             />
@@ -117,12 +117,14 @@ ReactWrapper {
             </h2>
           </header>,
           <section>
-            <form>
+            <form
+              onSubmit={[Function]}
+            >
               <input
                 aria-label="Pesquisa"
                 className="mb2 pesquisaInput br1"
                 onChange={[Function]}
-                placeholder="Pesquise aqui…"
+                placeholder="Pesquise aqui"
                 type="search"
               />
                
@@ -247,7 +249,7 @@ ReactWrapper {
               <input
                 aria-label="Pesquisa"
                 class="mb2 pesquisaInput br1"
-                placeholder="Pesquise aqui…"
+                placeholder="Pesquise aqui"
                 type="search"
                 value=""
               />
@@ -294,12 +296,14 @@ ReactWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <form>
+              <form
+                onSubmit={[Function]}
+              >
                 <input
                   aria-label="Pesquisa"
                   className="mb2 pesquisaInput br1"
                   onChange={[Function]}
-                  placeholder="Pesquise aqui…"
+                  placeholder="Pesquise aqui"
                   type="search"
                 />
                  
@@ -351,7 +355,7 @@ ReactWrapper {
                 <input
                   aria-label="Pesquisa"
                   class="mb2 pesquisaInput br1"
-                  placeholder="Pesquise aqui…"
+                  placeholder="Pesquise aqui"
                   type="search"
                   value=""
                 />
@@ -376,7 +380,7 @@ ReactWrapper {
                     aria-label="Pesquisa"
                     className="mb2 pesquisaInput br1"
                     onChange={[Function]}
-                    placeholder="Pesquise aqui…"
+                    placeholder="Pesquise aqui"
                     type="search"
                   />,
                   " ",
@@ -393,6 +397,7 @@ ReactWrapper {
                     />
                   </label>,
                 ],
+                "onSubmit": [Function],
               },
               "ref": null,
               "rendered": Array [
@@ -400,7 +405,7 @@ ReactWrapper {
                   "instance": <input
                     aria-label="Pesquisa"
                     class="mb2 pesquisaInput br1"
-                    placeholder="Pesquise aqui…"
+                    placeholder="Pesquise aqui"
                     type="search"
                     value=""
                   />,
@@ -410,7 +415,7 @@ ReactWrapper {
                     "aria-label": "Pesquisa",
                     "className": "mb2 pesquisaInput br1",
                     "onChange": [Function],
-                    "placeholder": "Pesquise aqui…",
+                    "placeholder": "Pesquise aqui",
                     "type": "search",
                     "value": undefined,
                   },
@@ -677,7 +682,7 @@ ReactWrapper {
               <input
                 aria-label="Pesquisa"
                 class="mb2 pesquisaInput br1"
-                placeholder="Pesquise aqui…"
+                placeholder="Pesquise aqui"
                 type="search"
                 value=""
               />
@@ -738,12 +743,14 @@ ReactWrapper {
               </h2>
             </header>,
             <section>
-              <form>
+              <form
+                onSubmit={[Function]}
+              >
                 <input
                   aria-label="Pesquisa"
                   className="mb2 pesquisaInput br1"
                   onChange={[Function]}
-                  placeholder="Pesquise aqui…"
+                  placeholder="Pesquise aqui"
                   type="search"
                 />
                  
@@ -868,7 +875,7 @@ ReactWrapper {
                 <input
                   aria-label="Pesquisa"
                   class="mb2 pesquisaInput br1"
-                  placeholder="Pesquise aqui…"
+                  placeholder="Pesquise aqui"
                   type="search"
                   value=""
                 />
@@ -915,12 +922,14 @@ ReactWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <form>
+                <form
+                  onSubmit={[Function]}
+                >
                   <input
                     aria-label="Pesquisa"
                     className="mb2 pesquisaInput br1"
                     onChange={[Function]}
-                    placeholder="Pesquise aqui…"
+                    placeholder="Pesquise aqui"
                     type="search"
                   />
                    
@@ -972,7 +981,7 @@ ReactWrapper {
                   <input
                     aria-label="Pesquisa"
                     class="mb2 pesquisaInput br1"
-                    placeholder="Pesquise aqui…"
+                    placeholder="Pesquise aqui"
                     type="search"
                     value=""
                   />
@@ -997,7 +1006,7 @@ ReactWrapper {
                       aria-label="Pesquisa"
                       className="mb2 pesquisaInput br1"
                       onChange={[Function]}
-                      placeholder="Pesquise aqui…"
+                      placeholder="Pesquise aqui"
                       type="search"
                     />,
                     " ",
@@ -1014,6 +1023,7 @@ ReactWrapper {
                       />
                     </label>,
                   ],
+                  "onSubmit": [Function],
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1021,7 +1031,7 @@ ReactWrapper {
                     "instance": <input
                       aria-label="Pesquisa"
                       class="mb2 pesquisaInput br1"
-                      placeholder="Pesquise aqui…"
+                      placeholder="Pesquise aqui"
                       type="search"
                       value=""
                     />,
@@ -1031,7 +1041,7 @@ ReactWrapper {
                       "aria-label": "Pesquisa",
                       "className": "mb2 pesquisaInput br1",
                       "onChange": [Function],
-                      "placeholder": "Pesquise aqui…",
+                      "placeholder": "Pesquise aqui",
                       "type": "search",
                       "value": undefined,
                     },
